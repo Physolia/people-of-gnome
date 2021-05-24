@@ -37,6 +37,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-datapage-generator
+  - jekyll-seo-tag
 
 page_gen:
   - data: 'members'
