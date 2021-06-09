@@ -6,7 +6,7 @@
         <span class="text-info lead">{{ include.description }}</span>
       </div>
       <div class="col-md-7 d-none d-md-flex justify-content-center align-items-center flex-column">
-        <img src="{{ include.image | prepend: site.url }}" class="img-fluid" alt="Page Wallpaper"/>
+        <img data-src="{{ include.image | prepend: site.url }}" class="img-fluid lazyload" alt="Page Wallpaper"/>
       </div>
     </div>
   </div>
