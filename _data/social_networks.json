@@ -16,7 +16,7 @@
   },
   {
     "id": "matrix",
-    "base": "https://matrix.to/#/",
+    "base": "https://matrix.to/#/@",
     "icon": "fa fa-comments"
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "id": "mastodon",
-    "base": "https://mastodon.social/",
+    "base": "https://mastodon.social/@",
     "icon": "fab fa-mastodon"
   },
   {

@@ -328,6 +328,7 @@ h6.letter-spacing-custom,
 #landing .main-heading {
     z-index: 100;
 }
+
 .text-shadow {
     text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.150) !important;
 }
@@ -378,15 +379,21 @@ h6.letter-spacing-custom,
   }
   
 .avatar-picture-lg {
-  width: 250px;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
 }
 
 .gnome-members-filter {
-  width: 300px;
-  border-radius: 0;
+    width: 300px;
+    border-radius: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .country-emoji {
+        margin-left: -80%;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {

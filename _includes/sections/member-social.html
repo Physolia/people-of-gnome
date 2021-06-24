@@ -6,7 +6,7 @@
     {% for entry in include.list %}
       {% assign social = member_social_networks | where:"id", entry[0] | first %}
       <li class="list-inline-item">
-        <a href="{{ entry[1] | prepend: social.base }}" class="text-muted text-primary">
+        <a href="{{ entry[1] | prepend: social.base }}" class="text-muted text-primary" target="_href">
           <i class="{{ social.icon }}"></i>
         </a>
       </li>
