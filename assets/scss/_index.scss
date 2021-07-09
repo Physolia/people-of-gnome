@@ -236,8 +236,29 @@ body {
     background-color: var(--light) !important;
 }
 
-/* styling for the go to top button */
+/* styling for faqs collapsible components */
+.accordion-section .panel .panel-heading a.collapsed:after {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
 
+.accordion-section .panel .panel-heading a:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f138";
+    padding-right: 3px;
+    font-weight: 900;
+    color: #c0c4bd !important;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+/* styling for the go to top button */
 #btn-go-to-top {
     bottom: 32px;
     right: 32px;
@@ -268,7 +289,6 @@ body {
 }
 
 /* following styles overwrite some of the styles defined by the dependencies */
-
 .fa-stack {
     line-height: inherit !important;
 }

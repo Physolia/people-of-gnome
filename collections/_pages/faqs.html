@@ -1,0 +1,57 @@
+---
+permalink: '/faqs'
+navbar_type: 'dark'
+
+faqs:
+  heading: Frequently asked Questions
+  description: Frequently asked Questions regarding Faces of GNOME Project
+  list:
+    - question: What is Faces of GNOME?
+      answer: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.
+    - question: How to be listed here?
+      answer: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+    - question: What are the restrictions?
+      answer: Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis. <br> suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. <br> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.
+    - question: How can I get myself added?
+      answer: At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos.
+    - question: How frequently the data is being added here?
+      answer: Et harum quidem rerum facilis est et expedita distinctio.
+    - question: How can I get removed?
+      answer: Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus.
+---
+
+{% include header.html %}
+{% include navbar.html %}
+
+<section class="py-4" id="team">
+  <div class="container pb-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-lg-7 py-4 text-center">
+        <h2 class="font-weight-light mb-3">{{ page.faqs.heading }}</h2>
+        <span class="text-muted"><p>{{ page.faqs.description }}</p></span>
+      </div>
+      <section class="accordion-section clearfix w-75 mt-3" aria-label="Question Accordions">
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            {% for panel in page.faqs.list %}
+            <div class="panel border mb-3">
+              <div class="panel-heading p-3" role="tab" id="{{ 'heading' | append: forloop.index }}">
+                <p class="text-left m-0">
+                  <a class="d-flex justify-content-between collapsed text-decoration-none" data-toggle="collapse" data-parent="#accordion" href="{{ '#collapse' | append: forloop.index }}" aria-expanded="true" aria-controls="{{ 'collapse' | append: forloop.index }}">
+                  {{ panel.question }}
+                  </a>
+                </p>
+              </div>
+              <div id="{{ 'collapse' | append: forloop.index }}" class="collapse" role="tabpanel" aria-labelledby="{{ 'heading' | append: forloop.index }}">
+                <div class="text-muted px-3">
+                  <p>{{ panel.answer }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+      </section>
+    </div>
+</section>
+
+{% include scripts.html %}
+{% include footer.html %}
