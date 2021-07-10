@@ -30,7 +30,7 @@ faqs:
         <h2 class="font-weight-light mb-3">{{ page.faqs.heading }}</h2>
         <span class="text-muted"><p>{{ page.faqs.description }}</p></span>
       </div>
-      <section class="accordion-section clearfix w-75 mt-3" aria-label="Question Accordions">
+      <section class="accordion-section faqs w-75 mt-3" aria-label="Question Accordions">
           <div id="accordion" role="tablist" aria-multiselectable="true">
             {% for panel in page.faqs.list %}
             <div class="panel border mb-3">

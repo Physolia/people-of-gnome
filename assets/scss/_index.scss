@@ -431,12 +431,20 @@ h6.letter-spacing-custom,
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+    .faqs {
+        width: 100% !important;
+    }
     .country-div {
         left: 26rem;
     }    
 }
 
 @media screen and (max-width: 430px) {
+    .faqs {
+        width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
     .gnome-projects-filter {
         width: 185px;
         height: 38px;
