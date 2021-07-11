@@ -33,20 +33,20 @@ faqs:
       <section class="accordion-section faqs w-75 mt-3" aria-label="Question Accordions">
           <div id="accordion" role="tablist" aria-multiselectable="true">
             {% for panel in page.faqs.list %}
-            <div class="panel border mb-3">
-              <div class="panel-heading p-3" role="tab" id="{{ 'heading' | append: forloop.index }}">
-                <p class="text-left m-0">
-                  <a class="d-flex justify-content-between collapsed text-decoration-none" data-toggle="collapse" data-parent="#accordion" href="{{ '#collapse' | append: forloop.index }}" aria-expanded="true" aria-controls="{{ 'collapse' | append: forloop.index }}">
-                  {{ panel.question }}
-                  </a>
-                </p>
-              </div>
-              <div id="{{ 'collapse' | append: forloop.index }}" class="collapse" role="tabpanel" aria-labelledby="{{ 'heading' | append: forloop.index }}">
-                <div class="text-muted px-3">
-                  <p>{{ panel.answer }}</p>
+              <div class="panel border mb-3">
+                <div class="panel-heading p-3" role="tab" id="{{ 'heading' | append: forloop.index }}">
+                  <p class="text-left m-0">
+                    <a class="d-flex justify-content-between collapsed text-decoration-none" data-toggle="collapse" data-parent="#accordion" href="{{ '#collapse' | append: forloop.index }}" aria-expanded="true" aria-controls="{{ 'collapse' | append: forloop.index }}">
+                    {{ panel.question }}
+                    </a>
+                  </p>
+                </div>
+                <div id="{{ 'collapse' | append: forloop.index }}" class="collapse" role="tabpanel" aria-labelledby="{{ 'heading' | append: forloop.index }}">
+                  <div class="text-muted px-3">
+                    <p>{{ panel.answer }}</p>
+                  </div>
                 </div>
               </div>
-            </div>
             {% endfor %}
           </div>
       </section>
