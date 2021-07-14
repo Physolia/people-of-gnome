@@ -42,9 +42,11 @@ The data used by the site is stored in the form of following files:
     │       ├── members.html                #contains the member widget template
     │       ├── member-badges.html          #contains a sub-widget for displaying a member badges
     │       ├── member-conferences.html     #contains a sub-widget for displaying a member conferences list
+    │       ├── member-posts.html           #contains a sub-widget for displaying blog posts
     │       └── member-social.html          #contains a sub-widget for displaying a member social networks
     ├── _layouts/     
     │   ├── member.html                     #contains permanent profile page template for each members
+    │   ├── post.html                       #contains complete single blog post template
     ├── assets/                             #contains site's valuable entities
     │   ├── font/                           #contains site's font: Red Hat Display
     │   ├── img/                            #contains site's images and illustrations
@@ -172,7 +174,7 @@ Package | Version | File | Source
 --- | --- | --- | ---
 bootstrap | `4.4.1` | [package.json][package.json] | [GitHub](https://github.com/twbs/bootstrap/)
 @fortawesome/fontawesome-free | `5.12.0` | [package.json][package.json] | [GitHub](https://github.com/FortAwesome/Font-Awesome/)
-jquery | `3.4.1` | [package.json][package.json] | [GitHub](https://github.com/jquery/jquery)
+jquery-slim | `3.0.0` | [package.json][package.json] | [GitHub](https://github.com/thesabbir/jquery-slim)
 popper.js | `1.16.1` | [package.json][package.json] | [GitHub](https://github.com/FezVrasta/popper.js/)
 slick-carousel | `1.8.1` | [package.json][package.json] | [GitHub](https://github.com/kenwheeler/slick/)
 moment | `2.24.0` | [package.json][package.json] | [GitHub](https://github.com/moment/moment/)
