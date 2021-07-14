@@ -34,7 +34,6 @@ The data used by the site is stored in the form of following files:
     │   ├── footer.html                     #the footer of the site
     │   ├── header.html                     #the meta data of the site
     │   ├── navbar.html                     #the navbar of the site
-    │   ├── scripts.html                    #the scripts used in the site
     │   ├── subheader.html                  #the subheader of the site
     │   ├── contributors/                   #contains templates for the contributors pages
     │   ├── foundation/                     #contains templates for the foundation pages
@@ -49,6 +48,7 @@ The data used by the site is stored in the form of following files:
     ├── assets/                             #contains site's valuable entities
     │   ├── font/                           #contains site's font: Red Hat Display
     │   ├── img/                            #contains site's images and illustrations
+    │   ├── js/                             #contains the scripts used in the site
     │   └── scss                            #contains site's preprocessor stylesheets
     │       ├── colorful.scss               #stylesheet for syntax highlighting
     │       ├── index.scss                  #stylesheet for user defined styles
@@ -74,6 +74,7 @@ Create a new YAML file on `_data/members/` directory containing the following en
 
 | Field         | Description                                       | Example                 | Type                                                    |
 | ------------- |:-------------------------------------------------:| -----------------------:| ------------------------------------------------------- |
+| ID            | Your file name                                    | member-template         | string                                                  |
 | Name          | Your name                                         | John Smith              | string                                                  |
 | Nick Name     | Your nick name                                    | ovflowd                | string                                                  |
 | Pronoun       | Your pronoun                                      | he\him                  | string                                                  |
@@ -88,6 +89,29 @@ Create a new YAML file on `_data/members/` directory containing the following en
 | Socials        | Social media handles                             | `{'twitter': 'handle'}` | collection:key from `social_networks.json`;value:string |
 
 After this, add a new entry and commit the changes with a **Merge Request**. If details are filled in correctly, it will be approved.
+
+## Adding blog posts
+
+Create a new directory in `collections/_posts/` having similar name of your ID used in your profile.
+To create a blog post add a file in your respective directory with the following format:
+```
+YEAR-MONTH-DAY-title.md
+```
+Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, For example, the following are examples of valid post filenames:
+```
+2021-03-24-gnome-40-release.md
+2019-09-12-a-new-look-for-the-health-app.md
+```
+
+You can also look at [this sample blog post](_data/2021-03-24-gnome-40.md) for reference.
+
+| Field         | Description                                       | Example                 | Type                                                    |
+| ------------- |:-------------------------------------------------:| -----------------------:| ------------------------------------------------------- |
+| `layout`      | Post                                              | post                    | string                                                  |
+| `title`       | Blog post title                                   | GNOME 40 Release!       | string                                                  |
+| `author_id`   | Your ID                                           | claudio-wunder          | string                                                  |
+| `author_name` | Your name                                         | Claudio Wunder          | string                                                  |
+| `tags`        | Tags used (Optional Field)                        | [GNOME 40, Features, Release] | array                                             |
 
 ## Add Custom Badges/Social Networks and Projects
 

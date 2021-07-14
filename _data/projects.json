@@ -74,7 +74,7 @@
   {
     "id": "epiphany",
     "name": "GNOME Web",
-    "icon": "https://gitlab.gnome.org/GNOME/epiphany/-/raw/master/help/C/media/epiphany-icon.png",
+    "icon": "https://gitlab.gnome.org/uploads/-/system/project/avatar/1906/org.gnome.Epiphany.png",
     "description": " A GNOME web browser based on the WebKit rendering engine",
     "repository": "https://gitlab.gnome.org/GNOME/epiphany",
     "maintainers": [

@@ -1,5 +1,4 @@
 ---
-navbar_type: dark
 permalink: '/speakers'
 
 heading: GNOME Speakers
@@ -11,6 +10,7 @@ speakers:
 ---
 
 {% include header.html %}
+{% assign navbar_type= "dark" %}
 {% include navbar.html %}
 {% include subheader.html
   image='/assets/img/gnome-speaker-wall.png'
@@ -51,5 +51,6 @@ speakers:
   </div>
 </section>
 
-{% include scripts.html %}
+<script src="{{ '/assets/js/filter-members.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
 {% include footer.html %}

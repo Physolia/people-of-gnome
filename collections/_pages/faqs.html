@@ -1,6 +1,5 @@
 ---
 permalink: '/faqs'
-navbar_type: 'dark'
 
 faqs:
   heading: Frequently asked Questions
@@ -21,6 +20,7 @@ faqs:
 ---
 
 {% include header.html %}
+{% assign navbar_type= "dark" %}
 {% include navbar.html %}
 
 <section class="py-4" id="team">
@@ -53,5 +53,5 @@ faqs:
     </div>
 </section>
 
-{% include scripts.html %}
+<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
 {% include footer.html %}

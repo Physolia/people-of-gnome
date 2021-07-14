@@ -19,7 +19,7 @@ $BUNDLER_PATH/bundle install --path=$GEM_PATH --standalone
 
 echo -e "💡 \033[1;34mcopying node packages locally \033[0m\n"
 
-dependencies=('@fortawesome' 'bootstrap' 'jquery' 'moment' 'popper.js' 'slick-carousel')
+dependencies=('@fortawesome' 'bootstrap' 'jquery-slim' 'moment' 'popper.js' 'slick-carousel')
 
 for dependency in "${dependencies[@]}"
 do

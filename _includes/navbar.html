@@ -9,7 +9,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
 {% endcomment %}
 
 <body>
-  {% assign handle = page.navbar_type %}
+  {% assign handle = navbar_type %}
   {% case handle %}
     {% when 'dark' %}
       {% assign text_color = 'white' %}
@@ -29,8 +29,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
       <a href="{{ site.url }}" class="navbar-brand text-{{ text_color }}">
       {% if handle == 'dark' %}
         <img data-src="{{ '/assets/img/gnome-logo.svg' | prepend: site.url }}" class="pr-2 lazyload" style="max-width:100px;" />
-      {% endif %}
-      {% if handle == 'light' || 'white' || 'transparent %}
+      {% elsif handle == 'light' || 'white' || 'transparent %}
         <img data-src="{{ '/assets/img/gnome-dark-logo.svg' | prepend: site.url }}" class="pr-2 lazyload" style="max-width:100px;" />
       {% endif %}
       </a>

@@ -1,15 +1,12 @@
----
-navbar_type: dark
----
-
 {% include header.html %}
+{% assign navbar_type = "dark" %}
 {% include navbar.html %}
 
 <section>
-  <div class="container pr-4 pl-4" style="min-height: 50vh;">
-    <div class="row py-5">
+  <div class="container px-4 py-5" style="min-height: 50vh;">
+    <div class="row">
       <div class="col-lg-4 col-md-12 py-3">
-        <div class="position-relative">
+        <div class="member-avatar position-relative">
           <div class="rounded-circle avatar-picture-lg ml-lg-5 m-auto" style="background-image:url( '{{ page.avatar | default: default_avatar }}' )">
           </div>
           {% if page.country %}
@@ -56,18 +53,18 @@ navbar_type: dark
               {% assign project_info = site.data.projects | where:"id", project | first %}
               {% if project_info %}
                 <div class="row pl-3">
-                  <div>
-                    <div class="row no-gutters d-flex justify-content-start">
-                      <h6 class="d-none d-md-block col-12 text-primary small font-weight-normal letter-spacing-custom pl-0">{{ page.maintainers.subheading | upcase }}</h6>
-                      <div class="row no-gutters d-flex justify-content-start pt-1">
-                        <div class="col-12 col-sm-auto pb-2 mr-3">
-                          <img data-src="{{ project_info.icon }}" class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload" style="opacity:.8;" alt="Fonts">
-                        </div>
-                        <div class="col">
-                          <h6 class="d-block pl-0 d-md-none col-12 text-primary small font-weight-normal letter-spacing-custom">{{ page.maintainers.subheading | upcase }}</h6>
-                          <h4 class="font-weight-light mb-1">{{ project_info.name }}</h4>
-                          <small class="text-muted">{{ project_info.description }}</small>
-                        </div>
+                  <div class="row no-gutters d-flex justify-content-start">
+                    <h6 class="d-none d-md-block col-12 text-primary small font-weight-normal letter-spacing-custom pl-0">
+                      {{ page.maintainers.subheading | upcase }}</h6>
+                    <div class="row no-gutters d-flex justify-content-start pt-1">
+                      <div class="col-12 col-sm-auto pb-2 mr-3">
+                        <img data-src="{{ project_info.icon }}" class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload" style="opacity:.8;" alt="Fonts">
+                      </div>
+                      <div class="col">
+                        <h6 class="d-block pl-0 d-md-none col-12 text-primary small font-weight-normal letter-spacing-custom">
+                          {{ page.maintainers.subheading | upcase }}</h6>
+                        <h4 class="font-weight-light mb-1">{{ project_info.name }}</h4>
+                        <small class="text-muted">{{ project_info.description }}</small>
                       </div>
                     </div>
                   </div>
@@ -78,8 +75,10 @@ navbar_type: dark
         {% endif %}
       </div>
     </div>
+    {% include sections/member-posts.html %}
   </div>
 </section>
 
-{% include scripts.html %}
+<script src="{{ '/assets/js/filter-posts.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
 {% include footer.html %}

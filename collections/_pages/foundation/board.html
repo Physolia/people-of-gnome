@@ -1,5 +1,4 @@
 ---
-navbar_type: dark
 permalink: '/foundation/board'
 
 heading: GNOME Board of Directors
@@ -11,6 +10,7 @@ foundation:
 ---
 
 {% include header.html %}
+{% assign navbar_type= "dark" %}
 {% include navbar.html %}
 {% include subheader.html
   image='/assets/img/wall-staff.svg'
@@ -41,5 +41,5 @@ foundation:
   </div>
 </section>
 
-{% include scripts.html %}
+<script src="{{ '/assets/js/filter-members.js' | prepend: site.url }}"></script>
 {% include footer.html %}
