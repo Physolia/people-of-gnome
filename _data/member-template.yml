@@ -1,18 +1,18 @@
 ---
 id: member-template #same as file name
 name: John Smith
-nick: JSmith
-pronoun: he
-country: ✨
+nick: JSmith #optional
+title: Something
+pronoun: he #optional
+country: ✨ #optional
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 avatar: https://my-avatar-url.png
-title: Something
-badges:
+badges: #refer: badges.json file for badge id
   - badge-one
   - badge-two
   - badge-third
 active: true
-projects:
+projects: # refer: projects.json for project id
   - some-project
 conferences:
   - some-conference
@@ -20,9 +20,10 @@ social:
   blog: https://my.site
   twitter: handle
   gitlab: handle
-  matrix: handle # don't include @
+  matrix: handle #don't include @
   instagram: handle
   dev_to: handle
   github: handle
   mastodon: handle #don't include @
   keybase: handle
+---
