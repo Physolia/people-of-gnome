@@ -34,7 +34,9 @@ layout: default
         </div>
       </div>
     </div>
-    <img src="{{ page.banner_img }}" class="text-center"></img>
+    {% if page.banner_img %}
+      <img src="{{ page.banner_img }}" class="text-center"></img>
+    {% endif %}
   </div>
   <p>
     {{ content }}

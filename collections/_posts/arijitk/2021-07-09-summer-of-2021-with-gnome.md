@@ -3,7 +3,7 @@ layout: post
 title: Summer of 2021 with GNOME
 author_id: arijitk
 author_name: Arijit
-tags: [GSoC'21, Faces of GNOME, GNOME, People/Faces]
+tags: [GSoC'21, Faces of GNOME]
 banner_img: https://miro.medium.com/max/1400/1*hx_z4b9Y0xtaLZ5PgZEsBw.jpeg
 ---
 
