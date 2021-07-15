@@ -114,6 +114,7 @@ You can also look at [this sample blog post](_data/2021-03-24-gnome-40.md) for r
 | `author_id`   | Your ID                                           | claudio-wunder          | string                                                  |
 | `author_name` | Your name                                         | Claudio Wunder          | string                                                  |
 | `tags`        | Tags used (Optional Field)                        | [GNOME 40, Features, Release] | array                                             |
+| `banner_img`  | Link of banner image  (Optional Field)            | https://xyz/image.png   | string                                             |
 
 ## Add Custom Badges/Social Networks and Projects
 

@@ -29,10 +29,10 @@
       <div class="col-lg-8 col-md-12 py-3" id="post-section">
         <h6 class="text-center pr-6" id="message"></h6>
         {% for post in filtered_posts %}
-          <div class="py-3 member-post">
-            <div class="d-flex justify-content-between">
+          <div class="pt-2 pb-3 member-post">
+            <div class="d-flex justify-content-between align-items-center mb-3">
               {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-              <h6 class="text-muted font-weight-semi-bold mb-2">{{ post.date | date: date_format }}</h6>
+              <h6 class="text-muted font-weight-semi-bold mb-0">{{ post.date | date: date_format }}</h6>
               <div>
                 {% for each_tag in post.tags %}
                   <span class="btn btn-sm post-tags mr-2" id="post-tag">{{ each_tag }}</span>

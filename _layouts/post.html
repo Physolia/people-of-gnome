@@ -7,7 +7,7 @@ layout: default
 {% include navbar.html %}
 
 {% assign post_url = site.url | append: page.url %}
-{% assign twitter_url = "https://twitter.com/share?url=" | append: post_url | append: "/&source=" | append: site.url %}
+{% assign twitter_url = "https://twitter.com/share?url=" | append: post_url | append: "&text=" | append: page.title | append: "&source=" | append: site.url %}
 {% assign linkedin_url = "http://www.linkedin.com/shareArticle?mini=true&url=" | append: post_url %}
 {% assign facebook_url = "https://www.facebook.com/sharer/sharer.php?u=" | append: post_url %}
 
@@ -34,6 +34,7 @@ layout: default
         </div>
       </div>
     </div>
+    <img src="{{ page.banner_img }}" class="text-center"></img>
   </div>
   <p>
     {{ content }}
