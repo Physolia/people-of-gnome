@@ -111,8 +111,8 @@ You can also look at [this sample blog post](_data/2021-03-24-gnome-40.md) for r
 | ------------- |:-------------------------------------------------:| -----------------------:| ------------------------------------------------------- |
 | `layout`      | Post                                              | post                    | string                                                  |
 | `title`       | Blog post title                                   | GNOME 40 Release!       | string                                                  |
+| `author`      | Your name                                         | Claudio Wunder          | string                                                  |
 | `author_id`   | Your ID                                           | claudio-wunder          | string                                                  |
-| `author_name` | Your name                                         | Claudio Wunder          | string                                                  |
 | `tags`        | Tags used (Optional Field)                        | [GNOME 40, Features, Release] | array                                             |
 | `banner_img`  | Link of banner image  (Optional Field)            | https://xyz/image.png   | string                                             |
 
