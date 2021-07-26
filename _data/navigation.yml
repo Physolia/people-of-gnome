@@ -45,6 +45,11 @@ menu_links:
     header: true
     footer: true
     section: Foundation
+  - name: Mentors
+    href: /mentors
+    header: true
+    footer: true
+    section: Mentors  
   - name: Speakers
     href: /speakers
     header: true

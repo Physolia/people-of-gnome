@@ -8,6 +8,7 @@ badges:
   - maintainer
   - foundation
   - speaker
+  - mentor
 active: true
 projects:
   - gnome-shell
@@ -26,6 +27,13 @@ conferences:
   - fosdem-2019
   - fosdem-2018
   - fosdem-2016
+mentor:
+  - GSoC-2021 
+  - GSoC-2020 
+  - GSoC-2019 
+  - GSoC-2018 
+  - GSoC-2017 
+  - GSoC-2016 
 social:
   blog: https://blogs.gnome.org/fmuellner
   twitter: FMMuellner

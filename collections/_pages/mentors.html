@@ -1,0 +1,95 @@
+---
+permalink: '/mentors'
+heading: Outreach Mentors
+description: Find out more about the mentors of Summer of Code
+---
+
+{% include header.html %}
+{% assign navbar_type= "dark" %}
+{% include navbar.html %}
+{% include subheader.html
+  image='/assets/img/mentors.png'
+  heading=page.heading
+  description=page.description %}
+{% assign gsoc_editions = site.data.activities.gsoc %}
+{% assign outreachy_editions = site.data.activities.outreachy %}
+
+<section class="py-4 bg-light" id="mentorsSection">
+  <div class="container">
+    <div class="top-container justify-content-center">
+      <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter mentor-pagination"
+      placeholder="Search for a mentor..." />
+      <div class="d-flex">
+        <div class="select-wrapper">
+          <select id="selectYear" class="form-control w-auto" onchange="sortMentors(event)">
+            {% for edition in gsoc_editions.editions %}
+              <option value="{{ edition | first }}">{{ edition | first }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="select-wrapper">
+          <select id="selectType" class="form-control w-auto" onchange="sortMentors(event)">
+            <option value="all">Type</option>
+            <option value="gsoc">GSoC</option>
+            <option value="outreachy">Outreachy</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center pt-3 mx-auto">
+      {% for edition in gsoc_editions.editions %}
+        {% assign year = edition | first %}
+        {% assign gsoc_year = year | prepend: "GSoC-" %}
+        {% assign outreachy_year = year | prepend: "Outreachy-" %}        
+        <div id="{{ year }}" class="group w-100">
+          <div class="{{ 'gsoc-section-' | append: year }} text-center pt-4">
+            <img data-src="{{ '/assets/img/gsoc-logo.svg' | prepend: site.url }}" class="lazyload" alt="GSoC Logo"/>
+            <h4 class="text-center pt-2 pb-4">Google Summer of Code {{ year }}</h4>
+            <span class="text-muted">
+              <strong class="{{ 'gsoc-message-' | append: year }}"></strong>
+            </span>
+            <div class="row d-flex justify-content-center mx-auto gnome-members-list">
+              {% for member_hash in site.data.members %}
+                {% if member_hash[1].badges contains 'mentor' %}
+                  {% if member_hash[1].mentor contains gsoc_year %}
+                    {% assign member = member_hash[1] %}
+                    {% capture widgets %}
+                      {% include sections/member-social.html list=member.social %}
+                    {% endcapture %}
+                    {% include sections/member.html member=member widgets=widgets %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <hr class="{{ 'horizontal-rule-' | append: year }} w-75 mt-5 mb-3">
+          <div class="{{ 'outreachy-section-' | append: year }} text-center pt-4 pb-5">
+            <img data-src="{{ '/assets/img/outreachy-logo.svg' | prepend: site.url }}" class="lazyload" style="width: 23%" alt="Outreachy Logo"/>
+            <h4 class="text-center pt-2 pb-4">{{ year }}</h4>
+            <span class="text-muted">
+              <strong class="{{ 'outreachy-message-' | append: year }}"></strong>
+            </span>
+            <div class="row d-flex justify-content-center mx-auto gnome-members-list">
+              {% for member_hash in site.data.members %}
+                {% if member_hash[1].badges contains 'mentor' %}
+                  {% if member_hash[1].mentor contains outreachy_year %}
+                    {% assign member = member_hash[1] %}
+                    {% capture widgets %}
+                      {% include sections/member-social.html list=member.social %}
+                    {% endcapture %}
+                    {% include sections/member.html member=member widgets=widgets %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script src="{{ '/assets/js/mentors.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/filter-members.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
+{% include footer.html %}

@@ -21,6 +21,13 @@
     "link": "https://gitlab.gnome.org"
   },
   {
+    "id": "mentor",
+    "name": "Mentor",
+    "class": "small badge badge-grey",
+    "icon": false,
+    "link": "/mentors"
+  },
+  {
     "id": "foundation",
     "name": "Foundation",
     "class": "small badge badge-success",

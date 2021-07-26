@@ -7,11 +7,15 @@ badges:
   - contributor
   - foundation
   - speaker
+  - mentor
 active: true
 projects:
   - gnome-events
 conferences:
   - guadec-2018
+mentor:
+  - GSoC-2021 
+  - GSoC-2020 
 social:
   blog: https://wunder.codes
   twitter: ovflowd

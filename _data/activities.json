@@ -1,0 +1,33 @@
+{
+  "gsoc": {
+    "name": "Google Summer of Code",
+    "positions": ["student", "mentor"],
+    "editions": {
+      "2021": "https://wiki.gnome.org/Outreach/SummerOfCode/2021/Ideas",
+      "2020": "https://wiki.gnome.org/Outreach/SummerOfCode/2020/Ideas",
+      "2019": "https://wiki.gnome.org/Outreach/SummerOfCode/2019/Ideas",
+      "2018": "https://wiki.gnome.org/Outreach/SummerOfCode/2018/Ideas",
+      "2017": "https://wiki.gnome.org/Outreach/SummerOfCode/2017/Ideas",
+      "2016": "https://wiki.gnome.org/Outreach/SummerOfCode/2016/Ideas",
+      "2015": "https://wiki.gnome.org/Outreach/SummerOfCode/2015/Ideas",
+      "2014": "https://wiki.gnome.org/Outreach/SummerOfCode/2014/Ideas",
+      "2013": "https://wiki.gnome.org/Outreach/SummerOfCode/2013/Ideas",
+      "2012": "https://wiki.gnome.org/Outreach/SummerOfCode/2012/Ideas",
+      "2011": "https://wiki.gnome.org/Outreach/SummerOfCode/2011/Ideas",
+      "2010": "https://wiki.gnome.org/Outreach/SummerOfCode/2010/Ideas",
+      "2009": "https://wiki.gnome.org/Outreach/SummerOfCode/2009/Ideas",
+      "2008": "https://wiki.gnome.org/Outreach/SummerOfCode/2008/Ideas",
+      "2007": "https://wiki.gnome.org/Outreach/SummerOfCode/2007/Ideas"
+    }
+  },
+  "outreachy": {
+    "name": "Outreachy",
+    "positions": ["student", "mentor"],
+    "editions": {
+      "2021": "https://www.outreachy.org/past-projects/",
+      "2020": "https://www.outreachy.org/past-projects/",
+      "2019": "https://www.outreachy.org/past-projects/",
+      "2018": "https://www.outreachy.org/past-projects/"
+    }
+  }
+}

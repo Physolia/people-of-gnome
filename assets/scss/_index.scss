@@ -96,6 +96,28 @@ body {
     scroll-behavior: smooth;
 }
 
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+  
+.select-wrapper::after {
+    top: 15px;
+    right: 1rem;
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
 .app-icon {
     width: 100px !important;
 }
@@ -557,6 +579,16 @@ h6.letter-spacing-custom,
     border-radius: 0;
 }
 
+#mentorsSection .container .top-container {
+    display: flex;
+}
+
+#selectYear,
+#selectType {
+    padding-right: 1.75rem;
+    margin-left: 1rem;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1280px) {
     .country-emoji {
         margin-left: -80%;
@@ -606,6 +638,31 @@ h6.letter-spacing-custom,
 
     .country-div {
         left: 12.8rem;
+    }
+
+    .select-wrapper:nth-of-type(1)::after {
+        top: 2rem;
+        left: 4rem;
+        right: 0rem;
+    }
+
+    .select-wrapper:nth-of-type(2)::after {
+        top: 2rem;
+        left: 7rem;
+        right: 0rem;
+    }
+
+    #mentorsSection .container .top-container {
+        display: block;
+    }
+
+    #selectYear {
+        margin-top: 1rem;
+        margin-left: 0rem;
+    }
+
+    #selectType {
+        margin-top: 1rem;
     }
 }
 
