@@ -1,5 +1,5 @@
 let date = new Date();
-let currentYear = "#" + date.getFullYear();
+let currentYear = date.getFullYear();
 let type = "all";
 
 let gsocSection = mentorsSection.querySelector(`.gsoc-section-${date.getFullYear()}`);
@@ -12,32 +12,23 @@ let outreachyMentorsList = outreachySection.querySelector(".gnome-members-list")
 let gsocMessage = mentorsSection.querySelector(`.gsoc-message-${date.getFullYear()}`);
 let outreachyMessage = mentorsSection.querySelector(`.outreachy-message-${date.getFullYear()}`);
 
-if (gsocMentorsList.innerHTML.replace(/\s/g,'')[0] == undefined) {
-  gsocMessage.innerHTML = "No entries found.";
-} else {
-  gsocMessage.innerHTML = "";
-}
+gsocMessage.innerHTML = gsocMentorsList.innerHTML.replace(/\s/g,'')[0] === undefined ? "No entries found." : "";
+outreachyMessage.innerHTML = outreachyMentorsList.innerHTML.replace(/\s/g,'')[0] === undefined ? "No entries found." : "";
 
-if (outreachyMentorsList.innerHTML.replace(/\s/g,'')[0] == undefined) {
-  outreachyMessage.innerHTML = "No entries found.";
-} else {
-  outreachyMessage.innerHTML = "";
-}
-
-$(document).ready(function () {
-  $('.group').hide();
-  $(currentYear).show();
-  $('#selectYear').change(function () {
-    $('.group').hide();
-    $('#' + $(this).val()).show();
-  })
+document.addEventListener("DOMContentLoaded", function() { 
+  [...document.querySelectorAll('.group')].forEach(year => year.style.display = "none");
+  document.getElementById(currentYear).style.display = "";
 });
 
 const sortMentors = (event) => {
   let val = event.target.value;
 
-  if (val[0] == "2") {
+  if (val[0] === "2") {
     let year = val;
+
+    [...document.querySelectorAll('.group')].forEach(eachYear => eachYear.style.display = "none");
+    document.getElementById(year).style.display = "";
+
     gsocSection = mentorsSection.querySelector(`.gsoc-section-${year}`);
     outreachySection = mentorsSection.querySelector(`.outreachy-section-${year}`);
     hr = mentorsSection.querySelector(`.horizontal-rule-${year}`);
@@ -51,12 +42,12 @@ const sortMentors = (event) => {
   gsocMentorsList = gsocSection.querySelector(".gnome-members-list");
   outreachyMentorsList = outreachySection.querySelector(".gnome-members-list");
 
-  if (type == 'all') {
+  if (type === 'all') {
     gsocSection.style.display = "";
     outreachySection.style.display = "";
     hr.style.display = "";
   }
-  else if (type == 'gsoc') {
+  else if (type === 'gsoc') {
     gsocSection.style.display = "";
     outreachySection.style.display = "none";
     hr.style.display = "none";
@@ -67,15 +58,6 @@ const sortMentors = (event) => {
     hr.style.display = "none";
   }
   
-  if (gsocMentorsList.innerHTML.replace(/\s/g,'')[0] == undefined) {
-    gsocMessage.innerHTML = "No entries found.";
-  } else {
-    gsocMessage.innerHTML = "";
-  }
-
-  if (outreachyMentorsList.innerHTML.replace(/\s/g,'')[0] == undefined) {
-    outreachyMessage.innerHTML = "No entries found.";
-  } else {
-    outreachyMessage.innerHTML = "";
-  }
+  gsocMessage.innerHTML = gsocMentorsList.innerHTML.replace(/\s/g,'')[0] === undefined ? "No entries found." : "";
+  outreachyMessage.innerHTML = outreachyMentorsList.innerHTML.replace(/\s/g,'')[0] === undefined ? "No entries found." : "";
 }
