@@ -1,27 +1,31 @@
 <section class="pt-0 pb-5" id="our_maintainers">
-  <div class="container">
-    <div class="row text-center d-flex justify-content-center">
-      <div class="col-md-10 col-lg-7">
-        <h2 class="font-weight-light mb-3">{{ include.heading }}</h2>
-        <span class="text-muted">{{ include.description | markdownify }}</span>
-      </div>
-    </div>
-    <div class="app-logos slider pt-4">
-      {% assign projects = site.data.projects %}
-      {% for project in projects %}
-        <div class="slide d-flex flex-column align-items-center text-center">
-          <a href="{{ project.repository }}" target="_blank"><img data-src="{{ project.icon }}" class="img-fluid app-icon icon-dropshadow mb-2 lazyload" alt="{{ project.name }}" /></a>
-          <span class="text-muted small">{{ project.name }}</span></a>
+    <div class="container">
+        <div class="row text-center d-flex justify-content-center">
+            <div class="col-md-10 col-lg-7">
+                <h2 class="font-weight-light mb-3">{{ include.heading }}</h2>
+                <span class="text-muted">{{ include.description | markdownify }}</span>
+            </div>
         </div>
-      {% endfor %}
+        <div class="app-logos slider pt-4">
+            {% assign projects = site.data.projects %}
+            {% for project in projects %}
+                <div class="slide d-flex flex-column align-items-center text-center">
+                    <a href="{{ project.repository }}" target="_blank">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                             data-src="{{ project.icon }}" class="img-fluid app-icon icon-dropshadow mb-2 lazyload"
+                             alt="{{ project.name }}"/>
+                        <span class="text-muted small">{{ project.name }}</span>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row d-flex justify-content-center pt-3 mx-auto">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination-project">
+                    <input aria-label="" type="text" class="form-control rounded-left gnome-projects-filter"
+                           placeholder="Search for a Project/GNOMie..."/>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="row d-flex justify-content-center pt-3 mx-auto">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination-project">
-          <input aria-label="" type="text" class="form-control rounded-left gnome-projects-filter"
-                 placeholder="Search for a Project/GNOMie..."/>
-        </ul>
-      </nav>
-    </div>
-  </div>
 </section>

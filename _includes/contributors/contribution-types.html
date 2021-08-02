@@ -1,31 +1,32 @@
 <section class="pt-3 pb-5" id="type_of_contributors">
-  <div class="container">
-    <div class="row text-center d-flex justify-content-center">
-      <div class="col-md-10 col-lg-7">
-        <h2 class="font-weight-light mb-3">{{ include.heading }}</h2>
-        <span class="text-muted">{{ include.description | markdownify }}</span>
-      </div>
-    </div>
-    <div class="row contribution-types py-4">
-      {% for type in include.list %}
-        <div class="col-md-6 p-0">
-          <div class="col p-3">
-            <div class="col d-flex p-0 border border-primary rounded pointer shadow-sm-hover">    
-              <div class="bg-primary p-3 pt-4 rounded-left">
-                <i class="{{ type.icon }} fa-inverse fa-fw fa-lg my-auto"></i>
-              </div>          
-              <div class="ml-1 p-2">
-                <h7>{{ type.title }}</h7>
-              <span class="text-muted small">{{ type.description | markdownify }}</span>
-              </div>
+    <div class="container">
+        <div class="row text-center d-flex justify-content-center">
+            <div class="col-md-10 col-lg-7">
+                <h2 class="font-weight-light mb-3">{{ include.heading }}</h2>
+                <span class="text-muted">{{ include.description | markdownify }}</span>
             </div>
-          </div>
-        </div>        
-      {% endfor %}
+        </div>
+        <div class="row contribution-types py-4">
+            {% for type in include.list %}
+                <div class="col-md-6 p-0">
+                    <div class="col p-3">
+                        <div class="col d-flex p-0 border border-primary rounded pointer shadow-sm-hover">
+                            <div class="bg-primary p-3 pt-4 rounded-left">
+                                <i class="{{ type.icon }} fa-inverse fa-fw fa-lg my-auto"></i>
+                            </div>
+                            <div class="ml-1 p-2">
+                                <h7>{{ type.title }}</h7>
+                                <span class="text-muted small">{{ type.description | markdownify }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="https://wiki.gnome.org/Newcomers/" target="_blank"
+           class="d-flex py-3 px-3 my-3 text-decoration-none text-primary border rounded shadow-sm-hover bg-light-hover justify-content-between align-items-center mb-2">
+            Join our Community! Start contributing to GNOME!
+            <i class="fas fa-chevron-circle-right text-info"></i>
+        </a>
     </div>
-    <a href="https://wiki.gnome.org/Newcomers/" target="_blank" class="d-flex py-3 px-3 my-3 text-decoration-none text-primary border rounded shadow-sm-hover bg-light-hover justify-content-between align-items-center mb-2">
-       Join our Community! Start contributing to GNOME!
-      <i class="fas fa-chevron-circle-right text-info"></i>
-    </a>
-  </div>
 </section>
