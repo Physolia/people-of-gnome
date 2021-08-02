@@ -416,7 +416,7 @@
   {
     "id": "gnome-connections",
     "name": "Connections",
-    "icon": "https://gitlab.gnome.org/GNOME/connections/-/blob/master/data/icons/hicolor/scalable/apps/org.gnome.Connections.svg",
+    "icon": "https://gitlab.gnome.org/GNOME/connections/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Connections.svg",
     "description": "A remote desktop client for the GNOME desktop environment",
     "repository": "https://gitlab.gnome.org/GNOME/connections",
     "maintainers": [
