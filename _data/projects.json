@@ -53,7 +53,7 @@
   {
     "id": "gnome-shell",
     "name": "GNOME Shell",
-    "icon": "https://gitlab.gnome.org/GNOME/gnome-shell/-/raw/master/subprojects/extensions-app/logo.png",
+    "icon": "https://gitlab.gnome.org/GNOME/gnome-shell/-/raw/main/data/icons/hicolor/scalable/apps/org.gnome.Shell.Extensions.svg",
     "description": "Provides core user interface functions for the GNOME 3 desktop, like switching to windows and launching applications",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-shell",
     "maintainers": [
@@ -410,8 +410,17 @@
     "repository": "https://gitlab.gnome.org/GNOME/gnome-boxes",
     "maintainers": [
       "Alexander Larsson",
-      "Felipe Borges",
-      "Zeeshan Ali"
+      "Felipe Borges"
+    ]
+  },
+  {
+    "id": "gnome-connections",
+    "name": "Connections",
+    "icon": "https://gitlab.gnome.org/GNOME/connections/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Connections.svg",
+    "description": "A remote desktop client for the GNOME desktop environment",
+    "repository": "https://gitlab.gnome.org/GNOME/connections",
+    "maintainers": [
+      "Felipe Borges"
     ]
   },
   {

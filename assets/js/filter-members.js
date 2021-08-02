@@ -42,7 +42,7 @@ for (let i = 1; i <= amountOfMemberPages; i++) {
 }
 
 jQuery('.gnome-members-filter').on('keyup', function () {
-  currentMemberSearch = jQuery(this).val().toLowerCase();
+    currentMemberSearch = jQuery(this).val().toLowerCase();
 
   filterMethod();
 });

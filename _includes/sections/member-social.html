@@ -2,23 +2,23 @@
 {% assign is_profile_page = page.url | split: "/members/" | first %}
 
 <ul class="list-unstyled list-inline text-small mt-1 mb-0">
-  {% if is_profile_page == "" %}
-    {% for entry in include.list %}
-      {% assign social = member_social_networks | where:"id", entry[0] | first %}
-      <li class="list-inline-item">
-        <a href="{{ entry[1] | prepend: social.base }}" class="text-muted text-primary" target="_href">
-          <i class="{{ social.icon }}"></i>
-        </a>
-      </li>
-    {% endfor %}
-  {% else %}
-    {% for entry in include.list limit: 4 %}
-      {% assign social = member_social_networks | where:"id", entry[0] | first %}
-      <li class="list-inline-item">
-        <a href="{{ entry[1] | prepend: social.base }}" class="text-muted text-primary">
-          <i class="{{ social.icon }}"></i>
-        </a>
-      </li>
-    {% endfor %}
-  {% endif %}
+    {% if is_profile_page == "" %}
+        {% for entry in include.list %}
+            {% assign social = member_social_networks | where: "id", entry[0] | first %}
+            <li class="list-inline-item">
+                <a href="{{ entry[1] | prepend: social.base }}" class="text-muted text-primary" target="_href">
+                    <i class="{{ social.icon }}"></i>
+                </a>
+            </li>
+        {% endfor %}
+    {% else %}
+        {% for entry in include.list limit: 4 %}
+            {% assign social = member_social_networks | where: "id", entry[0] | first %}
+            <li class="list-inline-item">
+                <a href="{{ entry[1] | prepend: social.base }}" class="text-muted text-primary">
+                    <i class="{{ social.icon }}"></i>
+                </a>
+            </li>
+        {% endfor %}
+    {% endif %}
 </ul>

@@ -6,20 +6,24 @@ BUNDLER_PATH=$GEM_PATH/bin
 echo -e "\n💡 \033[1;34minstalling node dependencies \033[0m\n"
 
 # install npm dependencies
-npm ci ---cache .npm --prefer-offline --silent
+npx yarn install ---cache .npm --prefer-offline --frozen-lockfile
 
 echo -e "\n💡 \033[1;34minstalling bundler locally \033[0m\n"
 
-# install gem dependencies
-gem install bundler --install-dir=$GEM_PATH --quiet --silent
+# install bundler
+gem install bundler --install-dir=$GEM_PATH --quiet
 
-echo -e "💡 \033[1;34minstalling bundler packages locally \033[0m\n"
+echo -e "\n💡 \033[1;34minstalling bundler packages locally \033[0m\n"
 
-$BUNDLER_PATH/bundle install --path=$GEM_PATH --standalone
+# set bundler path
+$BUNDLER_PATH/bundle config set --local path $GEM_PATH
 
-echo -e "💡 \033[1;34mcopying node packages locally \033[0m\n"
+# install bundler dependencies
+$BUNDLER_PATH/bundle install --standalone
 
-dependencies=('@fortawesome' 'bootstrap' 'jquery-slim' 'moment' 'popper.js' 'slick-carousel')
+echo -e "\n💡 \033[1;34mcopying node packages locally \033[0m\n"
+
+dependencies=('@fortawesome' 'bootstrap' 'jquery-slim' 'moment' 'popper.js' 'slick-carousel' 'lazysizes')
 
 for dependency in "${dependencies[@]}"
 do

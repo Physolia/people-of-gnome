@@ -39,66 +39,72 @@ type_of_contributors:
 ---
 
 {% include header.html %}
-{% assign navbar_type= "dark" %}
+{% assign navbar_type = "dark" %}
 {% include navbar.html %}
 {% include subheader.html
-  image='/assets/img/wall-contributors.svg'
-  heading=page.heading
-  description=page.description %}
+        image='/assets/img/wall-contributors.svg'
+        heading=page.heading
+        description=page.description %}
 
 {% include contributors/who-makes-gnome-possible.html %}
 {% include contributors/contribution-types.html
-  heading=page.type_of_contributors.heading
-  description=page.type_of_contributors.description
-  list=page.type_of_contributors.list %}
+        heading=page.type_of_contributors.heading
+        description=page.type_of_contributors.description
+        list=page.type_of_contributors.list %}
 
 <section class="py-4" id="events">
-  <div class="container">
-    <h2 class="text-center font-weight-light mb-3">Recent Posts</h2>
-    <div class="row py-4">
-      {% for latest_post in site.related_posts limit: 3 %}
-      <div class="col-md-4 px-3 pb-4 pb-md-0">
-        <div class="w-100 px-4 py-4 rounded shadow-sm shadow-md-hover bg-light h-100">
-          <a class="text-decoration-none" href="{{ latest_post.url | relative_url }}"><h5 class="border-bottom border-primary pb-2 font-weight-normal">{{ latest_post.title }}<h5></a>
-          <span class="small">{{ latest_post.author }}</span>
-          <span class="mt-3 text-muted small post-ellipsis">{{ latest_post.excerpt }}</span>
+    <div class="container">
+        <h2 class="text-center font-weight-light mb-3">Recent Posts</h2>
+        <div class="row py-4">
+            {% for latest_post in site.related_posts limit: 3 %}
+                <div class="col-md-4 px-3 pb-4 pb-md-0">
+                    <div class="w-100 px-4 py-4 rounded shadow-sm shadow-md-hover bg-light h-100">
+                        <a class="text-decoration-none" href="{{ latest_post.url | relative_url }}">
+                            <h5 class="border-bottom border-primary pb-2 font-weight-normal">{{ latest_post.title }}</h5>
+                        </a>
+                        <span class="small">{{ latest_post.author }}</span>
+                        <span class="mt-3 text-muted small post-ellipsis">{{ latest_post.excerpt }}</span>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
-      </div>
-      {% endfor %}
     </div>
-  </div>
 </section>
 
 <section class="py-4 bg-light" id="team">
-  <div class="container">
-    <div class="row text-center d-flex justify-content-center">
-      <div class="col-md-10 col-lg-7">
-        <img data-src="{{ '/assets/img/i-am-gnome.png' | prepend: site.url }}" class="lazyload" alt="I am GNOME"/>
-        <h2 class="font-weight-light mb-3">{{ page.contributors.heading }}</h2>
-        <span class="text-muted">{{ page.contributors.description }}</span>
-      </div>
+    <div class="container">
+        <div class="row text-center d-flex justify-content-center">
+            <div class="col-md-10 col-lg-7">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="{{ '/assets/img/i-am-gnome.png' | prepend: site.url }}" class="lazyload"
+                     alt="I am GNOME"/>
+                <h2 class="font-weight-light mb-3">{{ page.contributors.heading }}</h2>
+                <span class="text-muted">{{ page.contributors.description }}</span>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center pt-5 mx-auto gnome-members-list">
+            {% for member_hash in site.data.members %}
+                {% assign member = member_hash[1] %}
+                {% capture widgets %}
+                    {% include sections/member-badges.html list=member.badges %}
+                    {% include sections/member-social.html list=member.social %}
+                {% endcapture %}
+                {% include sections/member.html member=member widgets=widgets %}
+            {% endfor %}
+        </div>
+        <div class="row d-flex justify-content-center pt-3 mx-auto">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
+                           placeholder="Search for a GNOMie..."/>
+                </ul>
+            </nav>
+        </div>
     </div>
-    <div class="row d-flex justify-content-center pt-5 mx-auto gnome-members-list">
-      {% for member_hash in site.data.members %}
-        {% assign member = member_hash[1] %}
-        {% capture widgets %}
-          {% include sections/member-badges.html list=member.badges %}
-          {% include sections/member-social.html list=member.social %}
-        {% endcapture %}
-        {% include sections/member.html member=member widgets=widgets %}
-      {% endfor %}
-    </div>
-    <div class="row d-flex justify-content-center pt-3 mx-auto">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
-                 placeholder="Search for a GNOMie..."/>
-        </ul>
-      </nav>
-    </div>
-  </div>
 </section>
+
+{% include footer.html %}
+{% include scripts.html %}
 
 <script src="{{ '/assets/js/filter-members.js' | prepend: site.url }}"></script>
 <script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
-{% include footer.html %}

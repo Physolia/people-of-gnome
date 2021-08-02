@@ -1,13 +1,15 @@
 <section class="py-4 d-flex flex-column align-items-center bg-dark text-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 d-flex justify-content-end flex-column main-heading">
-        <h1 class="display-3 pb-3">{{ include.heading }}</h1>
-        <span class="text-info lead">{{ include.description }}</span>
-      </div>
-      <div class="col-md-7 d-none d-md-flex justify-content-center align-items-center flex-column">
-        <img data-src="{{ include.image | prepend: site.url }}" class="img-fluid lazyload" alt="Page Wallpaper"/>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 d-flex justify-content-end flex-column main-heading">
+                <h1 class="display-3 pb-3">{{ include.heading }}</h1>
+                <span class="text-info lead">{{ include.description }}</span>
+            </div>
+            <div class="col-md-7 d-none d-md-flex justify-content-center align-items-center flex-column">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="{{ include.image | prepend: site.url }}" class="img-fluid lazyload"
+                     alt="Page Wallpaper"/>
+            </div>
+        </div>
     </div>
-  </div>
 </section>

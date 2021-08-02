@@ -1,0 +1,32 @@
+---
+id: felipeborges
+name: Felipe Borges
+avatar: https://www.gravatar.com/avatar/a2334a5760b839823b50faa7d996e340
+title: GNOME Lover
+badges:
+  - contributor
+  - foundation
+  - foundation-board
+  - maintainer
+  - speaker
+active: true
+projects:
+  - gnome-boxes
+  - gnome-connections
+  - gnome-control-center
+  - gnome-sound-recorder
+conferences:
+  - guadec-2012
+  - guadec-2013
+  - guadec-2014
+  - guadec-2016
+  - guadec-2017
+  - guadec-2018
+  - guadec-2019
+  - guadec-2020
+  - guadec-2021
+social:
+  blog: https://feborg.es/blog
+  twitter: felipeborges
+  gitlab: felipeborges
+---
