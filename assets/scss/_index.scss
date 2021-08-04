@@ -72,14 +72,14 @@ $heights: 25, 50, 75, 100, auto;
     overflow-x: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     transition: 0.3s ease-in-out;
-  }
 
-  .nav-side .btn-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-  }
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+    }
+  } 
 }
 
 html,
@@ -100,10 +100,9 @@ select {
 }
 
 .select-wrapper {
-    position: relative;
-}
-  
-.select-wrapper::after {
+  position: relative;
+
+  &::after {
     top: 15px;
     right: 1rem;
     position: absolute;
@@ -114,6 +113,7 @@ select {
     border-right: .3em solid transparent;
     border-bottom: 0;
     border-left: .3em solid transparent;
+  }
 }
 
 .app-icon {
@@ -273,48 +273,61 @@ select {
   background-size: cover !important;
 }
 
-.shadow-hover:hover {
-  cursor: pointer;
-  transition: box-shadow 0.15s ease-in-out;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+.shadow-hover {
+	&:hover {
+		cursor: pointer;
+		transition: box-shadow 0.15s ease-in-out;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	}
 }
 
-.shadow-sm-hover:hover {
-  cursor: pointer;
-  transition: box-shadow 0.15s ease-in-out;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+.shadow-sm-hover {
+	&:hover {
+		cursor: pointer;
+		transition: box-shadow 0.15s ease-in-out;
+		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+	}
 }
 
-.shadow-md-hover:hover {
-  transition: box-shadow 0.15s ease-in-out;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15) !important;
+.shadow-md-hover {
+	&:hover {
+		transition: box-shadow 0.15s ease-in-out;
+		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	}
 }
 
-.bg-light-hover:hover {
-  transition: 0.15s ease-in-out;
-  background-color: var(--light) !important;
+.bg-light-hover {
+	&:hover {
+		transition: 0.15s ease-in-out;
+		background-color: var(--light) !important;
+	}
 }
+
 
 /* styling for faqs collapsible components */
-.accordion-section .panel .panel-heading a.collapsed:after {
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
+.accordion-section .panel .panel-heading a.collapsed {
+	&:after {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
 }
 
-.accordion-section .panel .panel-heading a:after {
-  font-family: "Font Awesome 5 Free", serif;
-  content: "\f138";
-  padding-right: 3px;
-  font-weight: 900;
-  color: #c0c4bd;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+.accordion-section .panel .panel-heading a {
+  &:after {
+    font-family: "Font Awesome 5 Free", serif;
+    content: "\f138";
+    padding-right: 3px;
+    font-weight: 900;
+    color: #c0c4bd;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+	}
 }
 
 /* styling for the go to top button */
@@ -328,8 +341,10 @@ select {
   transition: 0.15s ease-in-out;
 }
 
-#btn-go-to-top:hover {
-  opacity: 1;
+#btn-go-to-top {
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .fa-halfx {
@@ -358,28 +373,11 @@ span p {
 }
 
 /* styling for the letter spacing of the headings */
-h1.letter-spacing-custom,
-.h1.letter-spacing-custom {
-  letter-spacing: initial;
-}
-
-h2.letter-spacing-custom,
-.h2.letter-spacing-custom {
-  letter-spacing: initial;
-}
-
-h3.letter-spacing-custom,
-.h3.letter-spacing-custom {
-  letter-spacing: initial;
-}
-
-h4.letter-spacing-custom,
-.h4.letter-spacing-custom {
-  letter-spacing: initial;
-}
-
-h5.letter-spacing-custom,
-.h5.letter-spacing-custom {
+h1.letter-spacing-custom, .h1.letter-spacing-custom,
+h2.letter-spacing-custom, .h2.letter-spacing-custom,
+h3.letter-spacing-custom, .h3.letter-spacing-custom,
+h4.letter-spacing-custom, .h4.letter-spacing-custom,
+h5.letter-spacing-custom, .h5.letter-spacing-custom {
   letter-spacing: initial;
 }
 
@@ -393,11 +391,12 @@ h6.letter-spacing-custom,
   font-size: 80%;
 }
 
-.grp-btn:focus,
-.grp-btn:active {
-  outline: none !important;
-  box-shadow: none !important;
-  border-bottom: 3px solid var(--primary) !important;
+.grp-btn {
+	&:focus, &:active {
+		outline: none !important;
+		box-shadow: none !important;
+		border-bottom: 3px solid var(--primary) !important;
+	}
 }
 
 .grp-btn.active {
@@ -638,18 +637,26 @@ h6.letter-spacing-custom,
     left: 12.8rem;
   }
   
-  .select-wrapper:nth-of-type(1)::after {
-    top: 2rem;
-    left: 4rem;
-    right: 0rem;
+  .select-wrapper {
+    &:nth-of-type(1) {
+      &::after {
+        top: 2rem;
+        left: 4rem;
+        right: 0rem;
+      }
+    }
   }
-
-  .select-wrapper:nth-of-type(2)::after {
-    top: 2rem;
-    left: 7rem;
-    right: 0rem;
+  
+  .select-wrapper {
+    &:nth-of-type(2) {
+      &::after {
+        top: 2rem;
+        left: 7rem;
+        right: 0rem;
+      }
+    }
   }
-
+  
   #mentorsSection .container .top-container {
     display: block;
   }

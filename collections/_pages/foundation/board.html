@@ -38,6 +38,14 @@ foundation:
                 {% endif %}
             {% endfor %}
         </div>
+        <div class="row d-flex justify-content-center pt-3 mx-auto">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
+                           placeholder="Search for a Board of Director..."/>
+                </ul>
+            </nav>
+        </div>
     </div>
 </section>
 
@@ -45,4 +53,3 @@ foundation:
 {% include scripts.html %}
 
 <script src="{{ '/assets/js/filter-members.js' | prepend: site.url }}"></script>
-<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>

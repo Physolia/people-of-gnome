@@ -52,24 +52,24 @@ $enable-responsive-font-sizes: true !important;
 
 // defining the color system for the website
 $theme-colors: ("primary": #3b86e2,
-        "secondary": #f28518,
-        "tertiary": #94d354,
-        "info": #c0c4bd,
-        "light": #f8f9fa,
-        "dark": #151515,
-        "grey": #6c757d,
-        "mdcolor": #f2f3f2,
-        "mdborder": #e7e8e9);
+  "secondary": #f28518,
+  "tertiary": #94d354,
+  "info": #c0c4bd,
+  "light": #f8f9fa,
+  "dark": #151515,
+  "grey": #6c757d,
+  "mdcolor": #f2f3f2,
+  "mdborder": #e7e8e9);
 
 // defining the spacing system for the website
 $spacer: 1rem;
 $spacers: (0: 0,
-        1: ($spacer * 0.25),
-        2: ($spacer * 0.5),
-        3: $spacer,
-        4: ($spacer * 2),
-        5: ($spacer * 4),
-        6: ($spacer * 8));
+  1: ($spacer * 0.25),
+  2: ($spacer * 0.5),
+  3: $spacer,
+  4: ($spacer * 2),
+  5: ($spacer * 4),
+  6: ($spacer * 8));
 
 $navbar-nav-link-padding-x: 0.8rem !important;
 
@@ -81,9 +81,9 @@ $input-focus-box-shadow: none !important;
 
 // styling for the mouse hover event happening on the navbar links
 $nav-bar-types: ("light": darken(map-get($theme-colors, "light"), 5%),
-        "white": darken(#ffffff, 5%),
-        "transparent": rgba(darken(#ffffff, 5%), 0.2),
-        "dark": lighten(map-get($theme-colors, "dark"), 15%));
+  "white": darken(#ffffff, 5%),
+  "transparent": rgba(darken(#ffffff, 5%), 0.2),
+  "dark": lighten(map-get($theme-colors, "dark"), 15%));
 
 @each $type,
 $color in $nav-bar-types {
@@ -114,9 +114,9 @@ $value in $theme-colors {
 
 // adding icons to bootstrap alerts
 $alert-icons: ("success": "\f0eb",
-        "info": "\f0eb",
-        "danger": "\f05e",
-        "warning": "\f06a"
+  "info": "\f0eb",
+  "danger": "\f05e",
+  "warning": "\f06a"
 );
 
 @each $color,
