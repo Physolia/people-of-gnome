@@ -1,7 +1,7 @@
 {
   "gsoc": {
     "name": "Google Summer of Code",
-    "positions": ["student", "mentor"],
+    "positions": ["mentee", "mentor"],
     "editions": {
       "2021": "https://wiki.gnome.org/Outreach/SummerOfCode/2021/Ideas",
       "2020": "https://wiki.gnome.org/Outreach/SummerOfCode/2020/Ideas",
@@ -22,7 +22,7 @@
   },
   "outreachy": {
     "name": "Outreachy",
-    "positions": ["student", "mentor"],
+    "positions": ["mentee", "mentor"],
     "editions": {
       "2021": "https://www.outreachy.org/past-projects/",
       "2020": "https://www.outreachy.org/past-projects/",

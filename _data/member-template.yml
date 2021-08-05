@@ -4,18 +4,23 @@ name: John Smith
 nick: JSmith #optional
 title: Something
 pronoun: he #optional
-country: ✨ #optional
+country: ✨ #optional (or favourite emoji)
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 avatar: https://my-avatar-url.png
-badges: #refer: badges.json file for badge id
-  - badge-one
-  - badge-two
-  - badge-third
+badges: #refer: badges.json file for badge ids
+  - contributor
+  - maintainer
+  - mentor
 active: true
-projects: # refer: projects.json for project id
+projects: #refer: projects.json for project ids
   - some-project
-conferences:
-  - some-conference
+conferences: #refer: events.json for conferenece ids
+  - guadec-2021
+  - gnsummit-2015
+mentor: # GSoC/Outreachy mentors
+  - gsoc-2021 
+  - gsoc-2020 
+  - outreachy-2019
 social:
   blog: https://my.site
   twitter: handle

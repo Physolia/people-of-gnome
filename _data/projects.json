@@ -17,7 +17,8 @@
     "description": "GNOME Contributors is the platform of the People of GNOME.",
     "repository": "https://gitlab.gnome.org/Teams/Engagement/websites/people-of-gnome",
     "maintainers": [
-      "claudio-wunder"
+      "claudio-wunder",
+      "arijitk"
     ]
   },
   {
@@ -57,8 +58,18 @@
     "description": "Provides core user interface functions for the GNOME 3 desktop, like switching to windows and launching applications",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-shell",
     "maintainers": [
-      "Florian Müllner",
-      "Georges Basile Stavracas Neto"
+      "fmuellner",
+      "georges-basile-stavracas-neto"
+    ]
+  },
+  {
+    "id": "gnome-control-center",
+    "name": "Settings",
+    "icon": "https://gitlab.gnome.org/GNOME/gnome-control-center/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Settings.svg",
+    "description": "GNOME's main interface to configure various aspects of the desktop",
+    "repository": "hhttps://gitlab.gnome.org/GNOME/gnome-control-center",
+    "maintainers": [
+      "felipeborges"
     ]
   },
   {
@@ -68,7 +79,7 @@
     "description": "Creates graphical user interfaces",
     "repository": "https://gitlab.gnome.org/GNOME/gtk",
     "maintainers": [
-      "Matthias Clasen"
+      "matthias-clasen"
     ]
   },
   {
@@ -78,9 +89,9 @@
     "description": " A GNOME web browser based on the WebKit rendering engine",
     "repository": "https://gitlab.gnome.org/GNOME/epiphany",
     "maintainers": [
-      "Carlos Garcia Campos",
-      "Jan-Michael Brummer",
-      "Michael Catanzaro"
+      "carlos-garcia-campos",
+      "jan-michael-brummer",
+      "michael-catanzaro"
     ]
   },
   {
@@ -90,8 +101,8 @@
     "description": "File manager for GNOME",
     "repository": "https://gitlab.gnome.org/GNOME/nautilus",
     "maintainers": [
-      "António Fernandes",
-      "Ondrej Holy"
+      "antonio-fernandes",
+      "ondrej-holy"
     ]
   },
   {
@@ -101,7 +112,7 @@
     "description": "An image viewing and cataloging program",
     "repository": "https://gitlab.gnome.org/GNOME/eog",
     "maintainers": [
-      "Felix Riemann"
+      "felix-riemann"
     ]
   },
   {
@@ -111,7 +122,7 @@
     "description": "A Webcam application for taking photos and videos",
     "repository": "https://gitlab.gnome.org/GNOME/cheese",
     "maintainers": [
-      "David King"
+      "david-king"
     ]
   },
   {
@@ -121,7 +132,7 @@
     "description": "The text editor of the GNOME desktop environment",
     "repository": "https://gitlab.gnome.org/GNOME/gedit",
     "maintainers": [
-      "Sébastien Wilmet"
+      "sebastien-wilmet"
     ]
   },
   {
@@ -131,7 +142,7 @@
     "description": "Document manager application",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-documents",
     "maintainers": [
-      "Christopher Davis"
+      "christopher-davis"
     ]
   },
   {
@@ -141,7 +152,7 @@
     "description": "A two-pane graphical file manager",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-commander",
     "maintainers": [
-      "Uwe Scholz"
+      "uwe-scholz"
     ]
   },
   {
@@ -151,7 +162,7 @@
     "description": "Email application",
     "repository": "https://gitlab.gnome.org/GNOME/geary",
     "maintainers": [
-      "Michael Gratton"
+      "michael-gratton"
     ]
   },
   {
@@ -161,8 +172,8 @@
     "description": "Library for mobile UI development using GTK/GNOME",
     "repository": "https://gitlab.gnome.org/GNOME/libhandy",
     "maintainers": [
-      "Adrien Plazas",
-      "Guido Günther"
+      "adrien-plazas",
+      "guido-gunther"
     ]
   },
   {
@@ -172,8 +183,8 @@
     "description": "Photo manager",
     "repository": "https://gitlab.gnome.org/GNOME/shotwell",
     "maintainers": [
-      "David Welch",
-      "Jens Georg"
+      "david-welch",
+      "jens-georg"
     ]
   },
   {
@@ -183,8 +194,8 @@
     "description": "Movie player for the GNOME desktop based on GStreamer",
     "repository": "https://gitlab.gnome.org/GNOME/totem",
     "maintainers": [
-      "Bastien Nocera",
-      "Tim-Philipp Müller"
+      "bastien-nocera",
+      "tim-philipp-muller"
     ]
   },
   {
@@ -194,7 +205,7 @@
     "description": "A reader for online comic strips",
     "repository": "https://gitlab.gnome.org/GNOME/buoh",
     "maintainers": [
-      "Jan Tojnar"
+      "jan-tojnar"
     ]
   },
   {
@@ -204,7 +215,7 @@
     "description": "Subtitle editor for the GNOME desktop",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-subtitles",
     "maintainers": [
-      "Pedro Castro"
+      "pedro-castro"
     ]
   },
   {
@@ -214,8 +225,18 @@
     "description": "Diary",
     "repository": "https://gitlab.gnome.org/GNOME/almanah",
     "maintainers": [
-      "Álvaro Peña",
-      "Philip Withnall"
+      "alvaro-pena",
+      "philip-withnall"
+    ]
+  },
+  {
+    "id": "mutter",
+    "name": "Mutter",
+    "icon": "",
+    "description": "Wayland display server, X11 window manager & compositor library.",
+    "repository": "https://gitlab.gnome.org/GNOME/mutter",
+    "maintainers": [
+      "fmuellner"
     ]
   },
   {
@@ -225,7 +246,7 @@
     "description": "Tool for uploading pictures to Flickr",
     "repository": "https://gitlab.gnome.org/GNOME/postr",
     "maintainers": [
-      "Germán Poo-Caamaño"
+      "german-poo-caamano"
     ]
   },
   {
@@ -235,7 +256,7 @@
     "description": "Weather App for monitoring current weather conditions",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-weather",
     "maintainers": [
-      "Vitaly Dyachkov"
+      "vitaly-dyachkov"
     ]
   },
   {
@@ -245,7 +266,7 @@
     "description": "Game for GNOME",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-2048",
     "maintainers": [
-      "Arnaud B."
+      "arnaudb"
     ]
   },
   {
@@ -265,7 +286,7 @@
     "description": "A framework for working with bibliographic databases",
     "repository": "https://gitlab.gnome.org/GNOME/pybliographer",
     "maintainers": [
-      "Germán Poo-Caamaño"
+      "german-poo-caamano"
     ]
   },
   {
@@ -275,7 +296,7 @@
     "description": "Image viewer and browser",
     "repository": "https://gitlab.gnome.org/GNOME/gthumb",
     "maintainers": [
-      "Paolo Bacchilega"
+      "paolo-bacchilega"
     ]
   },
   {
@@ -285,12 +306,12 @@
     "description": "Tray applet and an advanced network connection editor",
     "repository": "https://gitlab.gnome.org/GNOME/network-manager-applet",
     "maintainers": [
-      "Antonio Cardace",
-      "Beniamino Galvani",
-      "Dan Williams",
-      "Francesco Giudici",
-      "Lubomir Rintel",
-      "Thomas Haller"
+      "antonio-cardace",
+      "beniamino-galvani",
+      "dan-williams",
+      "francesco-giudici",
+      "lubomir-rintel",
+      "thomas-haller"
     ]
   },
   {
@@ -300,7 +321,7 @@
     "description": "Application to view fonts on your system",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-font-viewer",
     "maintainers": [
-      "Cosimo Cecchi"
+      "cosimo-cecchi"
     ]
   },
   {
@@ -310,8 +331,8 @@
     "description": "GNOME Disk Usage Analyzer",
     "repository": "https://gitlab.gnome.org/GNOME/baobab",
     "maintainers": [
-      "Paolo Borelli",
-      "Stefano Facchini"
+      "paolo-borelli",
+      "stefano-facchini"
     ]
   },
   {
@@ -321,8 +342,8 @@
     "description": "A password and encryption key manager for GNOME",
     "repository": "https://gitlab.gnome.org/GNOME/seahorse",
     "maintainers": [
-      "Daiki Ueno",
-      "Niels De Graef"
+      "daiki-ueno",
+      "niels-de-graef"
     ]
   },
   {
@@ -332,10 +353,10 @@
     "description": "Programming language making available modern programming language features to GNOME developers, eliminating additional runtime requirements and without using a different ABI compared to applications and libraries",
     "repository": "https://gitlab.gnome.org/GNOME/vala",
     "maintainers": [
-      "Al Thomas",
-      "Florian Brosch",
-      "Jürg Billeter",
-      "Rico Tzschichholz"
+      "al-thomas",
+      "florian-brosch",
+      "jurg-billeter",
+      "rico-tzschichholz"
     ]
   },
   {
@@ -345,10 +366,10 @@
     "description": "Desktop sound recorder",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-sound-recorder",
     "maintainers": [
-      "Bilal Elmoussaoui",
-      "Christopher Davis",
-      "Felipe Borges",
-      "Meg Ford"
+      "bilal-elmoussaoui",
+      "christopher-davis",
+      "felipeborges",
+      "meg-ford"
     ]
   },
   {
@@ -358,7 +379,7 @@
     "description": "Home media solution for sharing audio, video and pictures to other devices",
     "repository": "https://gitlab.gnome.org/GNOME/rygel",
     "maintainers": [
-      "Jens Georg"
+      "jens-georg"
     ]
   },
   {
@@ -368,7 +389,7 @@
     "description": "Browser extension for Google Chrome/Chromium, Firefox, Vivaldi, Opera, etc.",
     "repository": "https://gitlab.gnome.org/GNOME/chrome-gnome-shell",
     "maintainers": [
-      "Yuri Konotopov"
+      "yuri-konotopov"
     ]
   },
   {
@@ -378,8 +399,8 @@
     "description": "Calculator for solving mathematical equations",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-calculator",
     "maintainers": [
-      "Alberto Ruiz",
-      "Robert Roth"
+      "alberto-ruiz",
+      "robert-roth"
     ]
   },
   {
@@ -389,7 +410,7 @@
     "description": "Puzzle game",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-mines",
     "maintainers": [
-      "Robert Roth"
+      "robert-roth"
     ]
   },
   {
@@ -399,7 +420,7 @@
     "description": "Contacts manager for GNOME",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-contacts",
     "maintainers": [
-      "Niels De Graef"
+      "niels-de-graef"
     ]
   },
   {
@@ -409,8 +430,8 @@
     "description": "A simple GNOME 3 application to access remote or virtual systems",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-boxes",
     "maintainers": [
-      "Alexander Larsson",
-      "Felipe Borges"
+      "alexander-larsson",
+      "felipeborges"
     ]
   },
   {
@@ -420,7 +441,7 @@
     "description": "A remote desktop client for the GNOME desktop environment",
     "repository": "https://gitlab.gnome.org/GNOME/connections",
     "maintainers": [
-      "Felipe Borges"
+      "felipeborges"
     ]
   },
   {
@@ -430,8 +451,8 @@
     "description": "IDE for writing GNOME-based softwares",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-builder",
     "maintainers": [
-      "Christian Hergert",
-      "Sébastien Lafargue"
+      "christian-hergert",
+      "sebastien-lafargue"
     ]
   },
   {
@@ -441,7 +462,7 @@
     "description": "Meld is a visual diff and merge tool targeted at developers. It helps users to compare files, directories, and version controlled projects",
     "repository": "https://gitlab.gnome.org/GNOME/meld",
     "maintainers": [
-      "Kai Willadsen"
+      "kai-willadsen"
     ]
   },
   {
@@ -451,7 +472,7 @@
     "description": "Write an ISO file to multiple USB devices at once",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-multi-writer",
     "maintainers": [
-      "Richard Hughes"
+      "richard-hughes"
     ]
   },
   {
@@ -461,11 +482,11 @@
     "description": "Calendar application for GNOME",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-calendar",
     "maintainers": [
-      "Felipe Augusto",
-      "Georges Basile Stavracas Neto",
-      "George Willian Condomitti",
-      "Isaac Ferreira Filho",
-      "Thiago"
+      "felipe-augusto",
+      "georges-basile-stavracas-neto",
+      "george-willian-condomitti",
+      "isaac-ferreira-filho",
+      "thiago"
     ]
   },
   {
@@ -475,11 +496,11 @@
     "description": "Matrix group messaging app",
     "repository": "https://gitlab.gnome.org/GNOME/fractal",
     "maintainers": [
-      "Christopher Davis",
-      "Daniel Garcia Moreno",
-      "Eisha Chen-yen-su",
+      "christopher-davis",
+      "daniel-garcia-moreno",
+      "eisha-chen-yen-su",
       "mairandomness",
-      "Sonja Heinze"
+      "sonja-heinze"
     ]
   },
   {
@@ -489,7 +510,7 @@
     "description": "An intuitive and powerful application to manage your personal tasks",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-todo",
     "maintainers": [
-      "Georges Basile Stavracas Neto"
+      "georges-basile-stavracas-neto"
     ]
   },
   {
@@ -499,9 +520,9 @@
     "description": "GNOME Javascript bindings",
     "repository": "https://gitlab.gnome.org/GNOME/gjs",
     "maintainers": [
-      "Cosimo Cecchi",
-      "Giovanni Campagna",
-      "Philip Chimento"
+      "cosimo-cecchi",
+      "giovanni-campagna",
+      "philip-chimento"
     ]
   },
   {
@@ -511,18 +532,18 @@
     "description": "GNOME Usage displays information about use of system resources",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-usage",
     "maintainers": [
-      "Adrien Plazas",
-      "Petr Štětka"
+      "adrien-plazas",
+      "petr-stetka"
     ]
   },
   {
     "id": "polari",
     "name": "Polari",
-    "icon": "https://gitlab.gnome.org/GNOME/polari/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Polari.svg",
+    "icon": "https://gitlab.gnome.org/GNOME/polari/-/raw/main/data/icons/hicolor/scalable/apps/org.gnome.Polari.svg",
     "description": "Polari is a simple IRC Client that is designed to integrate seamlessly with GNOME 3",
     "repository": "https://gitlab.gnome.org/GNOME/polari",
     "maintainers": [
-      "Florian Müllner"
+      "fmuellner"
     ]
   },
   {
@@ -532,8 +553,8 @@
     "description": "An tool to sign OpenPGP keys over the local network",
     "repository": "https://gitlab.gnome.org/GNOME/gnome-keysign",
     "maintainers": [
-      "Ludovico de Nittis",
-      "Tobias Mueller"
+      "ludovico-de-nittis",
+      "tobias-mueller"
     ]
   },
   {
@@ -543,7 +564,7 @@
     "description": "JSON-GLib implements a full JSON parser and generator using GLib and GObject, and integrates JSON with GLib data types",
     "repository": "https://gitlab.gnome.org/GNOME/json-glib",
     "maintainers": [
-      "Emmanuele Bassi"
+      "emmanuele-bassi"
     ]
   }
 ]

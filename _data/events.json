@@ -1,5 +1,65 @@
 [
   {
+    "id": "guadec-2001",
+    "name": "GUADEC 2001",
+    "link": "https://wiki.gnome.org/GUADEC"
+  },
+  {
+    "id": "guadec-2002",
+    "name": "GUADEC 2002",
+    "link": "https://wiki.gnome.org/GUADEC"
+  },
+  {
+    "id": "guadec-2003",
+    "name": "GUADEC 2003",
+    "link": "https://wiki.gnome.org/GUADEC"
+  },
+  {
+    "id": "guadec-2004",
+    "name": "GUADEC 2004",
+    "link": "https://2004.guadec.org/"
+  },
+  {
+    "id": "guadec-2005",
+    "name": "GUADEC 2005",
+    "link": "https://2005.guadec.org/"
+  },
+  {
+    "id": "guadec-2006",
+    "name": "GUADEC 2006",
+    "link": "https://2006.guadec.org/"
+  },
+  {
+    "id": "guadec-2007",
+    "name": "GUADEC 2007",
+    "link": "https://2007.guadec.org/"
+  },
+  {
+    "id": "guadec-2008",
+    "name": "GUADEC 2008",
+    "link": "https://2008.guadec.org/"
+  },
+  {
+    "id": "guadec-2009",
+    "name": "GUADEC 2009",
+    "link": "https://2009.guadec.org/"
+  },
+  {
+    "id": "guadec-2010",
+    "name": "GUADEC 2010",
+    "link": "https://2010.guadec.org/"
+  },
+  {
+    "id": "desktop-summit-2011",
+    "name": "Desktop Summit 2011",
+    "link": "https://desktopsummit.org/"
+  },
+  {
+    "id": "guadec-2012",
+    "name": "GUADEC 2012",
+    "link": "https://2012.guadec.org/"
+  },
+  {
     "id": "guadec-2013",
     "name": "GUADEC 2013",
     "link": "https://2013.guadec.org/"
@@ -33,6 +93,26 @@
     "id": "guadec-2019",
     "name": "GUADEC 2019",
     "link": "https://2019.guadec.org"
+  },
+  {
+    "id": "guadec-2020",
+    "name": "GUADEC 2020",
+    "link": "https://events.gnome.org/event/1/"
+  },
+  {
+    "id": "guadec-2021",
+    "name": "GUADEC 2021",
+    "link": "https://events.gnome.org/event/9/"
+  },
+  {
+    "id": "guadec-2022",
+    "name": "GUADEC 2022",
+    "link": "https://wiki.gnome.org/GUADEC/2022/"
+  },
+  {
+    "id": "guadec-2023",
+    "name": "GUADEC 2023",
+    "link": "https://wiki.gnome.org/GUADEC/2023/"
   },
   {
     "id": "gnsummit-2016",
@@ -113,6 +193,11 @@
     "id": "scale18x-2020",
     "name": "Scalw 18X 2020",
     "link": "https://www.socallinuxexpo.org/scale/18x"
+  },
+  {
+    "id": "fosdem-2021",
+    "name": "FOSDEM 2021",
+    "link": "https://stands.fosdem.org/stands/the_gnome_foundation/"
   },
   {
     "id": "fosdem-2020",
@@ -243,6 +328,10 @@
     "id": "gasummit-2019",
     "name": "GNOME.Asia Summit 2019",
     "link": "https://wiki.gnome.org/GnomeAsia/2019Summit"
+  },
+  {
+    "id": "gasummit-2020",
+    "name": "GNOME.Asia Summit 2020",
+    "link": "https://events.gnome.org/event/24/"
   }
-  
 ]
