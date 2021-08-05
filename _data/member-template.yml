@@ -6,7 +6,7 @@ title: Something
 pronoun: he #optional
 country: ✨ #optional (or favourite emoji)
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-avatar: https://my-avatar-url.png
+avatar: https://my-avatar-url.png #prefers minimum image of size 250*250
 badges: #refer: badges.json file for badge ids
   - contributor
   - maintainer
@@ -15,7 +15,7 @@ badges: #refer: badges.json file for badge ids
 active: true
 projects: #refer: projects.json for project ids
   - some-project
-conferences: #refer: events.json for conferenece ids
+conferences: #refer: events.json for conference ids
   - guadec-2021
   - gnsummit-2015
 mentor: # GSoC/Outreachy mentors

@@ -78,7 +78,7 @@ Create a new YAML file on `_data/members/` directory containing the following en
 | ------------- |:-------------------------------------------------:| -----------------------:| ------------------------------------------------------- |
 | ID            | Your file name                                    | member-template         | string                                                  |
 | Name          | Your name                                         | John Smith              | string                                                  |
-| Nick Name     | Your nick name                                    | ovflowd                | string                                                  |
+| Nick Name     | Your nick name                                    | ovflowd                 | string                                                  |
 | Pronoun       | Your pronoun                                      | he\him                  | string                                                  |
 | Bio           | Your bio/description                              | Kindness is amazing!    | string                                                  |
 | Country       | Your country/favourite emoji                      | 💫                      | emoji                                                   |
@@ -87,8 +87,10 @@ Create a new YAML file on `_data/members/` directory containing the following en
 | Badges        | All the badges/roles you held at GNOME/Foundation | `['engagement-team']`   | array:entries from `badges.json`                        |
 | Status        | If you're a current/active GNOME Contributor      | `true`                  | boolean                                                 |
 | Projects      | The Projects/Repositories you're working on       | `['gtk']`               | array:entries from `projects.json`                      |
+| Mentors       | Programs in which you mentored students           | `['gsoc-2021']`         | array:entries from `activities.json`                    |
+| Mentees       | Programs in which you were mentored               | `['outreachy-2020']`    | array:entries from `activities.json`                    |
 | Conferences   | The Conferences you participated in               | `['guadec-2018']`       | array:entries from `events.json`                        |
-| Socials        | Social media handles                             | `{'twitter': 'handle'}` | collection:key from `social_networks.json`;value:string |
+| Socials       | Social media handles                              | `{'twitter': 'handle'}` | collection:key from `social_networks.json`;value:string |
 
 After this, add a new entry and commit the changes with a **Merge Request**. If details are filled in correctly, it will be approved.
 
