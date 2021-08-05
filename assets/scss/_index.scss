@@ -1,9 +1,4 @@
-$breakpoints: (
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px
-);
+$breakpoints: ("sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px);
 
 $widths: 25, 50, 75, 100, auto;
 $heights: 25, 50, 75, 100, auto;
@@ -79,7 +74,7 @@ $heights: 25, 50, 75, 100, auto;
       right: 0;
       z-index: 1000;
     }
-  } 
+  }
 }
 
 html,
@@ -95,8 +90,8 @@ footer {
 }
 
 select {
-    -webkit-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .select-wrapper {
@@ -274,45 +269,45 @@ select {
 }
 
 .shadow-hover {
-	&:hover {
-		cursor: pointer;
-		transition: box-shadow 0.15s ease-in-out;
-		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-	}
+  &:hover {
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
 }
 
 .shadow-sm-hover {
-	&:hover {
-		cursor: pointer;
-		transition: box-shadow 0.15s ease-in-out;
-		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
-	}
+  &:hover {
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  }
 }
 
 .shadow-md-hover {
-	&:hover {
-		transition: box-shadow 0.15s ease-in-out;
-		box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15) !important;
-	}
+  &:hover {
+    transition: box-shadow 0.15s ease-in-out;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
 }
 
 .bg-light-hover {
-	&:hover {
-		transition: 0.15s ease-in-out;
-		background-color: var(--light) !important;
-	}
+  &:hover {
+    transition: 0.15s ease-in-out;
+    background-color: var(--light) !important;
+  }
 }
 
 
 /* styling for faqs collapsible components */
 .accordion-section .panel .panel-heading a.collapsed {
-	&:after {
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
+  &:after {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
 .accordion-section .panel .panel-heading a {
@@ -327,7 +322,7 @@ select {
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
-	}
+  }
 }
 
 /* styling for the go to top button */
@@ -342,9 +337,9 @@ select {
 }
 
 #btn-go-to-top {
-	&:hover {
-		opacity: 1;
-	}
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .fa-halfx {
@@ -392,11 +387,11 @@ h6.letter-spacing-custom,
 }
 
 .grp-btn {
-	&:focus, &:active {
-		outline: none !important;
-		box-shadow: none !important;
-		border-bottom: 3px solid var(--primary) !important;
-	}
+  &:focus, &:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-bottom: 3px solid var(--primary) !important;
+  }
 }
 
 .grp-btn.active {
@@ -577,13 +572,13 @@ h6.letter-spacing-custom,
 }
 
 #mentorsSection .container .top-container {
-    display: flex;
+  display: flex;
 }
 
 #selectYear,
 #selectType {
-    padding-right: 1.75rem;
-    margin-left: 1rem;
+  padding-right: 1.75rem;
+  margin-left: 1rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -636,7 +631,7 @@ h6.letter-spacing-custom,
   .country-div {
     left: 12.8rem;
   }
-  
+
   .select-wrapper {
     &:nth-of-type(1) {
       &::after {
@@ -646,24 +641,24 @@ h6.letter-spacing-custom,
       }
     }
   }
-  
+
   .select-wrapper {
     &:nth-of-type(2) {
       &::after {
         top: 2rem;
         left: 7rem;
-        right: 0rem;
+        right: 0;
       }
     }
   }
-  
+
   #mentorsSection .container .top-container {
     display: block;
   }
 
   #selectYear {
     margin-top: 1rem;
-    margin-left: 0rem;
+    margin-left: 0;
   }
 
   #selectType {
