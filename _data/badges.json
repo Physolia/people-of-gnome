@@ -28,6 +28,13 @@
     "link": "/mentors"
   },
   {
+    "id": "mentee",
+    "name": "Mentee",
+    "class": "small badge badge-grey",
+    "icon": false,
+    "link": "/mentees"
+  },
+  {
     "id": "foundation",
     "name": "Foundation",
     "class": "small badge badge-success",

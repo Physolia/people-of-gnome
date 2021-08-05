@@ -50,6 +50,11 @@ menu_links:
     header: true
     footer: true
     section: Mentors  
+  - name: Mentees
+    href: /mentees
+    header: true
+    footer: true
+    section: Mentees  
   - name: Speakers
     href: /speakers
     header: true

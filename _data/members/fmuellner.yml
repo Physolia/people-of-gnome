@@ -28,12 +28,12 @@ conferences:
   - fosdem-2018
   - fosdem-2016
 mentor:
-  - GSoC-2021 
-  - GSoC-2020 
-  - GSoC-2019 
-  - GSoC-2018 
-  - GSoC-2017 
-  - GSoC-2016 
+  - gsoc-2021 
+  - gsoc-2020 
+  - gsoc-2019 
+  - gsoc-2018 
+  - gsoc-2017 
+  - gsoc-2016 
 social:
   blog: https://blogs.gnome.org/fmuellner
   twitter: FMMuellner

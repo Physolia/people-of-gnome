@@ -72,7 +72,7 @@ type_of_contributors:
 </section>
 
 <section class="py-4 bg-light" id="team">
-    <div class="container">
+    <div class="container pb-4">
         <div class="row text-center d-flex justify-content-center">
             <div class="col-md-10 col-lg-7">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -82,7 +82,7 @@ type_of_contributors:
                 <span class="text-muted">{{ page.contributors.description }}</span>
             </div>
         </div>
-        <div class="row d-flex justify-content-center pt-5 mx-auto gnome-members-list">
+        <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
             {% for member_hash in site.data.members %}
                 {% assign member = member_hash[1] %}
                 {% capture widgets %}
@@ -92,7 +92,7 @@ type_of_contributors:
                 {% include sections/member.html member=member widgets=widgets %}
             {% endfor %}
         </div>
-        <div class="row d-flex justify-content-center pt-3 mx-auto">
+        <div class="row d-flex justify-content-center pb-3 mx-auto">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"

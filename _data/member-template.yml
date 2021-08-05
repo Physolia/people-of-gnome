@@ -11,6 +11,7 @@ badges: #refer: badges.json file for badge ids
   - contributor
   - maintainer
   - mentor
+  - mentee
 active: true
 projects: #refer: projects.json for project ids
   - some-project
@@ -18,6 +19,10 @@ conferences: #refer: events.json for conferenece ids
   - guadec-2021
   - gnsummit-2015
 mentor: # GSoC/Outreachy mentors
+  - gsoc-2021 
+  - gsoc-2020 
+  - outreachy-2019
+mentee: #GSoC/Outreachy students
   - gsoc-2021 
   - gsoc-2020 
   - outreachy-2019

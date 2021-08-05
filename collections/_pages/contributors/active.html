@@ -27,14 +27,14 @@ contributors:
 </section>
 
 <section class="py-4 bg-light" id="team">
-    <div class="container">
+    <div class="container pb-4">
         <div class="row text-center d-flex justify-content-center">
             <div class="col-md-10 col-lg-7">
                 <h2 class="font-weight-light mb-3">{{ page.contributors.heading }}</h2>
                 <span class="text-muted">{{ page.contributors.description }}</span>
             </div>
         </div>
-        <div class="row d-flex justify-content-center pt-5 mx-auto gnome-members-list">
+        <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
             {% for member_hash in site.data.members %}
                 {% if member_hash[1].active == true %}
                     {% assign member = member_hash[1] %}
@@ -46,7 +46,7 @@ contributors:
                 {% endif %}
             {% endfor %}
         </div>
-        <div class="row d-flex justify-content-center pt-3 mx-auto">
+        <div class="row d-flex justify-content-center pb-3 mx-auto">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"

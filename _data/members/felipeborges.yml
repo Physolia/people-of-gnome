@@ -9,6 +9,8 @@ badges:
   - foundation-board
   - maintainer
   - speaker
+  - mentor
+  - mentee
 active: true
 projects:
   - gnome-boxes
@@ -25,6 +27,13 @@ conferences:
   - guadec-2019
   - guadec-2020
   - guadec-2021
+mentor:
+  - gsoc-2020 
+  - gsoc-2018
+  - gsoc-2017
+  - gsoc-2016
+mentee:
+  - gsoc-2012 
 social:
   blog: https://feborg.es/blog
   twitter: felipeborges
