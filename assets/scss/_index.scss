@@ -3,6 +3,8 @@ $breakpoints: ("sm": 576px, "md": 768px, "lg": 992px, "xl": 1200px);
 $widths: 25, 50, 75, 100, auto;
 $heights: 25, 50, 75, 100, auto;
 
+// ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; }
+
 @each $breakpoint in map-keys($breakpoints) {
   @media (min-width: map-get($breakpoints, $breakpoint)) {
     @each $i in $widths {
@@ -298,7 +300,6 @@ select {
   }
 }
 
-
 /* styling for faqs collapsible components */
 .accordion-section .panel .panel-heading a.collapsed {
   &:after {
@@ -323,6 +324,14 @@ select {
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
   }
+}
+
+.badge {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
 }
 
 /* styling for the go to top button */
@@ -438,7 +447,7 @@ h6.letter-spacing-custom,
 }
 
 .country-circle-icon {
-  color: var(--light)
+  color: var(--light);
 }
 
 .country-emoji {
@@ -447,13 +456,18 @@ h6.letter-spacing-custom,
 }
 
 .pronoun-badge {
-  background-color: var(--grey)
+  background-color: var(--grey);
+  margin-right: 15px;
 }
 
 .ellipsis-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.audio-img {
+  height: 1.5em;
 }
 
 .pagination-project {
@@ -571,6 +585,16 @@ h6.letter-spacing-custom,
   border-radius: 0;
 }
 
+.speaker-index .list-inline-item {
+  &:last-child {
+    margin-right: 0.5rem;
+  }
+}
+
+.dots {
+  color: var(--primary);
+}
+
 #outreachSection .container .top-container {
   display: flex;
 }
@@ -666,11 +690,13 @@ h6.letter-spacing-custom,
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .footer-heading {
     font-size: 0.95rem;
   }
+}
 
+@media screen and (max-width: 375px) {
   .member-avatar {
     margin-left: 10%;
   }
@@ -686,15 +712,9 @@ h6.letter-spacing-custom,
   }
 }
 
+
 .gnome-member-name {
   font-family: "Cantarell", serif;
   font-weight: 600;
 }
 
-.badge {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 600 !important;
-}

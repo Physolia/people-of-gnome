@@ -1,10 +1,22 @@
 {% assign member_conferences = site.data.events %}
 
-<ul class="list-unstyled list-inline text-small my-1">
-    {% for entry in include.list %}
-        {% assign conference = member_conferences | where: "id", entry | first %}
-        <li class="list-inline-item">
-            <a href="{{ conference.link }}" class="small badge badge-primary">{{ conference.name }}</a>
-        </li>
-    {% endfor %}
+<ul class="list-unstyled list-inline text-small my-1 speaker-index">
+    {% if include.speaker_index %}
+        {% for entry in include.list | limit: 4 %}
+            {% assign conference = member_conferences | where: "id", entry | first %}
+            <li class="list-inline-item">
+                <a href="{{ conference.link }}" class="small badge badge-primary">{{ conference.name }}</a>
+            </li>
+        {% endfor %}
+        {% if include.list.size > 4 %}
+            <p class="d-inline position-absolute dots">...</p>
+        {% endif %}
+    {% else %}
+        {% for entry in include.list %}
+            {% assign conference = member_conferences | where: "id", entry | first %}
+            <li class="list-inline-item">
+                <a href="{{ conference.link }}" class="small badge badge-primary">{{ conference.name }}</a>
+            </li>
+        {% endfor %}
+    {% endif %}
 </ul>

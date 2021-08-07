@@ -175,8 +175,8 @@ list of dependencies used by this project:
 
 Package | Version | File | Source
 --- | --- | --- | ---
-bootstrap | `4.4.1` | [package.json][package.json] | [GitHub](https://github.com/twbs/bootstrap/)
-@fortawesome/fontawesome-free | `5.12.0` | [package.json][package.json] | [GitHub](https://github.com/FortAwesome/Font-Awesome/)
+bootstrap | `4.6.0` | [package.json][package.json] | [GitHub](https://github.com/twbs/bootstrap/)
+@fortawesome/fontawesome-free | `5.15.3` | [package.json][package.json] | [GitHub](https://github.com/FortAwesome/Font-Awesome/)
 jquery-slim | `3.0.0` | [package.json][package.json] | [GitHub](https://github.com/thesabbir/jquery-slim)
 popper.js | `1.16.1` | [package.json][package.json] | [GitHub](https://github.com/FezVrasta/popper.js/)
 slick-carousel | `1.8.1` | [package.json][package.json] | [GitHub](https://github.com/kenwheeler/slick/)

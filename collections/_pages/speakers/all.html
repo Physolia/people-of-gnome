@@ -13,9 +13,9 @@ speakers:
 {% assign navbar_type = "dark" %}
 {% include navbar.html %}
 {% include subheader.html
-        image='/assets/img/gnome-speaker-wall.png'
-        heading=page.heading
-        description=page.description %}
+    image='/assets/img/gnome-speaker-wall.png'
+    heading=page.heading
+    description=page.description %}
 
 {% include speakers/what-are-gnome-events.html %}
 {% include speakers/who-are-the-gnome-speakers.html %}
@@ -28,15 +28,15 @@ speakers:
                 <span class="text-muted">{{ page.speakers.description }}</span>
             </div>
         </div>
-        <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
+        <div class="row d-flex justify-content-center py-4 mx-auto gnome-members-list">
             {% for member_hash in site.data.members %}
                 {% if member_hash[1].badges contains 'speaker' %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
-                        {% include sections/member-conferences.html list=member.conferences %}
+                        {% include sections/member-conferences.html list=member.conferences speaker_index="true" %}
                         {% include sections/member-social.html list=member.social %}
                     {% endcapture %}
-                    {% include sections/member.html member=member widgets=widgets %}
+                    {% include sections/member.html member=member widgets=widgets speaker_index="true" %}
                 {% endif %}
             {% endfor %}
         </div>

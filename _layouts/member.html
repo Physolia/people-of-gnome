@@ -33,6 +33,17 @@
                 <span class="badge ml-2 text-white pronoun-badge">{{ page.pronoun }}</span>
               </h5>
             {% endif %}
+            {% if page.audio %}
+              <span class="sound ml-1">
+                <audio id="userAudio" preload="none" onplay="playing();" onended="stopped();">
+                  <source src="{{ page.audio }}" type="audio/mpeg">
+                </audio>
+                <a href="javascript:;" class="text-muted" id="audioControl" onclick="playclip();" data-toggle="tooltip" data-original-title="Hear it spoken">
+                  <img src="{{ '/assets/img/audio-volume-icon.svg' | prepend: site.url }}" class="audio-img mt-1" />
+                  <i class="fa fa-2x fa-volume-down pronounce d-none"></i>
+                </a>
+              </span>
+            {% endif %}
           </div>
         </div>
         <h4 class="text-muted">{{ page.title }}</h4>
@@ -83,4 +94,5 @@
 {% include scripts.html %}
 
 <script src="{{ '/assets/js/filter-posts.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/play-audio.js' | prepend: site.url }}"></script>
 <script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
