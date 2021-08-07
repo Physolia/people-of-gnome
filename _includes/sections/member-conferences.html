@@ -1,4 +1,5 @@
 {% assign member_conferences = site.data.events %}
+{% assign member_page_link = include.member.id | prepend: "/members/" | prepend: site.url %}
 
 <ul class="list-unstyled list-inline text-small my-1 speaker-index">
     {% if include.speaker_index %}
@@ -9,7 +10,7 @@
             </li>
         {% endfor %}
         {% if include.list.size > 4 %}
-            <p class="d-inline position-absolute dots">...</p>
+            <a class="d-inline position-absolute dots" href="{{ member_page_link }}">...</a>
         {% endif %}
     {% else %}
         {% for entry in include.list %}
