@@ -55,6 +55,6 @@ jQuery('.page-item').first().addClass('active');
 
 filterMethod();
 
-if (amountOfContributors < 0) {
+if (amountOfContributors <= 0) {
     jQuery('.gnome-members-list').append('<span class="text-muted"><strong>No entries found.</strong></span>');
 }
