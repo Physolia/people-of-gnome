@@ -27,6 +27,11 @@ $heights: 25, 50, 75, 100, auto;
   }
 }
 
+.open-to-work-tag {
+  top: 0;
+  margin: auto;
+}
+
 @media (max-width: 576px) {
   small,
   .small {
@@ -617,6 +622,10 @@ h6.letter-spacing-custom,
   .post-sidebar {
     position: initial !important;
   }
+
+  .open-to-work-tag {
+    margin-left: 12.7rem;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -626,6 +635,10 @@ h6.letter-spacing-custom,
 
   .country-div {
     left: 19.8rem;
+  }
+
+  .open-to-work-tag {
+    margin-left: 7rem;
   }
 }
 
@@ -654,6 +667,10 @@ h6.letter-spacing-custom,
     left: 12.8rem;
   }
 
+  .open-to-work-tag {
+    margin-left: 0rem;
+  }
+  
   .select-wrapper {
     &:nth-of-type(1) {
       &::after {

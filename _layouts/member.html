@@ -9,6 +9,9 @@
         <div class="member-avatar position-relative">
           <div class="rounded-circle avatar-picture-lg ml-lg-5 m-auto" style="background-image:url( '{{ page.avatar | default: default_avatar }}' )">
           </div>
+          {% if page.openToWork %}
+            <img src="{{ '/assets/img/open-to-work-tag.svg' | prepend: site.url }}" class="rounded-circle position-absolute open-to-work-tag avatar-picture-lg ml-lg-5"/>
+          {% endif %}
           {% if page.country %}
             <div class="position-absolute country-div">
               <i class="fa fa-circle fa-2x country-circle-icon" aria-hidden="true"></i>

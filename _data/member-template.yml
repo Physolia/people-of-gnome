@@ -13,7 +13,8 @@ badges: #refer: badges.json file for badge ids
   - mentor
   - mentee
 active: true
-projects: #refer: projects.json for project ids
+openToWork: true #optional
+projects: # refer: projects.json for project id
   - some-project
 conferences: #refer: events.json for conference ids
   - guadec-2021
