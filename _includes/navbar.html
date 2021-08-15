@@ -67,7 +67,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
                 {% endfor %}
                 {% assign menu_links = site.data.navigation.menu_links %}
                 {% for link in menu_links %}
-                    <a href="{{ link.href }}" {{ target_blank }}
+                    <a href="{{ link.href | prepend: site.url }}" {{ target_blank }}
                     class="nav-link-{{ bg_color }} float-right text-{{ text_color }} rounded">{{ link.name }}</a>
                 {% endfor %}
             </ul>
