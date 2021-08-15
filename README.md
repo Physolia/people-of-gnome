@@ -41,7 +41,7 @@ The data used by the site is stored in the form of following files:
     │   └── sections/                       #generic templates reused across the website
     │       ├── members.html                #contains the member widget template
     │       ├── member-badges.html          #contains a sub-widget for displaying a member badges
-    │       ├── member-conferences.html     #contains a sub-widget for displaying a member conferences list
+    │       ├── member-events.html          #contains a sub-widget for displaying a member events list
     │       ├── member-posts.html           #contains a sub-widget for displaying blog posts
     │       └── member-social.html          #contains a sub-widget for displaying a member social networks
     ├── _layouts/     
@@ -89,7 +89,7 @@ Create a new YAML file on `_data/members/` directory containing the following en
 | Projects      | The Projects/Repositories you're working on       | `['gtk']`               | array:entries from `projects.json`                      |
 | Mentors       | Programs in which you mentored students           | `['gsoc-2021']`         | array:entries from `activities.json`                    |
 | Mentees       | Programs in which you were mentored               | `['outreachy-2020']`    | array:entries from `activities.json`                    |
-| Conferences   | The Conferences you participated in               | `['guadec-2018']`       | array:entries from `events.json`                        |
+| Events        | The Events you participated in                    | `['guadec-2018']`       | array:entries from `events.json`                        |
 | Socials       | Social media handles                              | `{'twitter': 'handle'}` | collection:key from `social_networks.json`;value:string |
 
 After this, add a new entry and commit the changes with a **Merge Request**. If details are filled in correctly, it will be approved.

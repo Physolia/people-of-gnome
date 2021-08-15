@@ -8,6 +8,7 @@ badges:
   - foundation
   - foundation-board
   - maintainer
+  - developer
   - speaker
   - mentor
   - mentee
@@ -17,7 +18,7 @@ projects:
   - gnome-connections
   - gnome-control-center
   - gnome-sound-recorder
-conferences:
+events:
   - guadec-2012
   - guadec-2013
   - guadec-2014

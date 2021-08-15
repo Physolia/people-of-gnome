@@ -6,6 +6,7 @@ title: Certified GNOMIE
 badges:
   - contributor
   - maintainer
+  - developer
   - foundation
   - speaker
   - mentor
@@ -15,7 +16,7 @@ projects:
   - gnome-shell-extensions
   - mutter
   - polari
-conferences:
+events:
   - guadec-2013
   - guadec-2014
   - guadec-2015
@@ -38,3 +39,4 @@ social:
   blog: https://blogs.gnome.org/fmuellner
   twitter: FMMuellner
   gitlab: fmuellner
+---

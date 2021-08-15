@@ -14,12 +14,12 @@ badges: #refer: badges.json file for badge ids
   - mentee
 active: true
 openToWork: true #optional
-projects: # refer: projects.json for project id
+projects: #refer: projects.json for project id
   - some-project
-conferences: #refer: events.json for conference ids
+events: #refer: events.json for conference ids
   - guadec-2021
   - gnsummit-2015
-mentor: # GSoC/Outreachy mentors
+mentor: #GSoC/Outreachy mentors
   - gsoc-2021 
   - gsoc-2020 
   - outreachy-2019

@@ -1,19 +1,19 @@
 ---
-permalink: '/foundation/board'
+permalink: '/foundation/members'
 
-heading: GNOME Board of Directors
-description: The leaders of the GNOME Foundation.
+heading: GNOME Foundation
+description: Find out who are the GNOME Foundation Members.
 
 foundation:
-  heading: Current Board of Directors
-  description: This is the current Board of Directors of the GNOME Foundation
+  heading: Current Foundation Members
+  description: These are the current members of the GNOME Foundation
 ---
 
 {% include header.html %}
 {% assign navbar_type = "dark" %}
 {% include navbar.html %}
 {% include subheader.html
-        image='/assets/img/wall-staff.svg'
+        image='/assets/img/gnome-member-wall.png'
         heading=page.heading
         description=page.description %}
 
@@ -27,7 +27,7 @@ foundation:
         </div>
         <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
             {% for member_hash in site.data.members %}
-                {% if member_hash[1].active == true and member_hash[1].badges contains 'foundation-board' %}
+                {% if member_hash[1].badges contains 'foundation' or member_hash[1].badges contains 'foundation-board' %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
                         {% include member-sections/member-social.html list=member.social %}
@@ -40,7 +40,7 @@ foundation:
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
-                           placeholder="Search for a Board of Director..."/>
+                           placeholder="Search for a Member..."/>
                 </ul>
             </nav>
         </div>

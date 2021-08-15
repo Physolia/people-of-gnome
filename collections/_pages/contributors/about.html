@@ -1,0 +1,66 @@
+---
+permalink: '/contributors'
+
+heading: Contributors
+description: Find out the contributors who makes GNOME possible.
+
+sections:
+    - title: Contributors
+      heading: Who makes GNOME possible?
+      description: The GNOME Project is possible thanks to the all the people that contribute to the Project. These are our Contributors. They are our Developers, Translators, Documentation Gurus, Testers, Issue Reporters and the many other people that envision the GNOME Desktop.
+      reverse: false
+      image: /assets/img/gnome-contributor.jpg
+    - title: Developers
+      heading: Who develops GNOME?
+      description: Each project, app, and software behind GNOME are built by a group of diverse individuals. Those are the GNOME Developers. They deliver the pieces of code behind GNOME. They ship our Apps and the GNOME Desktop.
+      reverse: true
+      image: /assets/img/placeholder.png
+      link: /contributors/developers
+    - title: Maintainers
+      heading: Who maintains GNOME?
+      description: Each project, app, and software behind GNOME are leaded by a group of high-trusting individuals. Those are the GNOME Maintainers. They lead the development and design of each of our Initiatives.
+      reverse: false
+      image: /assets/img/gnome-maintainer.jpg
+      link: /contributors/maintainers
+    - title: Translators
+      heading: Who are translators?
+      description: These are the individuals that provide high quality documentation, including online help, tutorials, application manuals, and programming references.
+      reverse: true
+      image: /assets/img/placeholder.png
+      link: /contributors/translators
+    - title: Documenters
+      heading: Who are documenters?
+      description: These are the individuals that currently lead the Development of GNOME Applications, GTK, and many more.
+      reverse: false
+      image: /assets/img/placeholder.png
+      link: /contributors/documenters
+    - title: Designers
+      heading: Who are designers?
+      description: GNOME designers are a loose, informal team that works on the design of the GNOME user experience and developer experiences. The primary areas of work are OS design, application design, visual theme and icons.
+      reverse: true
+      image: /assets/img/placeholder.png
+      link: /contributors/designers
+    - title: Engagement Team
+      heading: What is the Engagement Team?
+      description: The Engagement Team works to promote GNOME by helping our communications with users, developers, contributors, partners and anyone else who might be interested in the project.
+      reverse: false
+      image: /assets/img/placeholder.png
+      link: /contributors/engagement-team
+---
+
+{% include header.html %}
+{% assign navbar_type = "dark" %}
+{% include navbar.html %}
+
+{% include about-subheader.html
+    image='/assets/img/placeholder.png'
+    heading=page.heading
+    description=page.description %}
+
+{% include about-sections.html 
+    list=page.sections %}
+
+{% include footer.html %}
+{% include scripts.html %}
+
+<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>

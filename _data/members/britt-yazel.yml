@@ -6,14 +6,16 @@ title: Ex-Board of Directors
 badges:
   - contributor
   - maintainer
+  - developer
   - foundation
   - speaker
 active: true
 projects:
   - gnome-events
-conferences:
+events:
   - guadec-2019
 social:
   blog: https://blog.brittyazel.com/
   twitter: bwyazel
   gitlab: bwyazel
+---

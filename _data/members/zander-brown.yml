@@ -6,6 +6,7 @@ title: Person who does things
 badges:
   - contributor
   - maintainer
+  - developer
   - foundation
   - translator
 active: true
@@ -16,3 +17,4 @@ projects:
 social:
   gitlab: zanderbrown
   matrix: "zbrown:matrix.org"
+---

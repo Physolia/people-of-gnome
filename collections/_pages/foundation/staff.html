@@ -29,12 +29,11 @@ staff_roles:
         heading=page.heading
         description=page.description %}
 
-{% include foundation/what-the-gnome-staff-do.html %}
 {% include foundation/foundation-staff-roles.html
         heading=page.staff_roles.heading
         list=page.staff_roles.list %}
 
-<section class="py-4 bg-light" id="team">
+<section class="pt-5 pb-4 bg-light" id="team">
     <div class="container pb-4">
         <div class="row text-center d-flex justify-content-center">
             <div class="col-md-10 col-lg-7">
@@ -47,9 +46,9 @@ staff_roles:
                 {% if member_hash[1].active == true and member_hash[1].badges contains 'staff' %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
-                        {% include sections/member-social.html list=member.social %}
+                        {% include member-sections/member-social.html list=member.social %}
                     {% endcapture %}
-                    {% include sections/member.html member=member widgets=widgets %}
+                    {% include member-sections/member.html member=member widgets=widgets %}
                 {% endif %}
             {% endfor %}
         </div>

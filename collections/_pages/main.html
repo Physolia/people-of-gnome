@@ -13,29 +13,43 @@ type_of_contributors:
   description: GNOME has all kind of people. They do all sort of things. Check out some of the things they do.
   list:
     - title: Designers
+      link: /contributors/designers
       description: They design our components, apps, our guidelines and ensure GNOME look and feel high standards.
       icon: fas fa-palette
     - title: Developers
+      link: /contributors/developers
       description: They deliver the pieces of code behind GNOME. They ship our Apps and the GNOME Desktop.
       icon: fas fa-layer-group
     - title: Translators
+      link: /contributors/translators
       description: They ensure GNOME to be more understandable and usable to all people around the world.
       icon: fas fa-language
     - title: Documenter
+      link: /contributors/documenters
       description: They document and create guides of everything GNOME. From our GTK APIs to Newcomer guides.
       icon: fas fa-drafting-compass
     - title: Engagement
+      link: /contributors/engagement-team
       description: They manages our Communities, Conferences, Marketing, and Events. They are the frontier of GNOME.
       icon: fas fa-comments
     - title: Moderators
       description: They ensure that our Communities are healthy and secure and play a vital role in establishing the tenor of a forum.
       icon: fas fa-shield-alt
     - title: Mentors
+      link: /outreach/mentors
       description: They manage and supervise student programs like Google Summer of Code, Google Season of Docs and Outreachy.
       icon: fas fa-graduation-cap
     - title: Staff
+      link: /foundation/staff
       description: They handle the internals of the GNOME Foundation and ensure our Operations run smoothly.
       icon: fas fa-id-badge
+
+sections:
+  - title: Contributors
+    heading: Who makes GNOME possible?
+    description: The GNOME Project is possible thanks to the all the people that contribute to the Project. These are our Contributors. They are our Developers, Translators, Documentation Gurus, Testers, Issue Reporters and the many other people that envision the GNOME Desktop.
+    reverse: false
+    image: /assets/img/gnome-contributor.jpg
 ---
 
 {% include header.html %}
@@ -46,30 +60,36 @@ type_of_contributors:
         heading=page.heading
         description=page.description %}
 
-{% include contributors/who-makes-gnome-possible.html %}
+{% include about-sections.html 
+  list=page.sections %}
 {% include contributors/contribution-types.html
         heading=page.type_of_contributors.heading
         description=page.type_of_contributors.description
         list=page.type_of_contributors.list %}
 
-<section class="py-4" id="events">
-    <div class="container">
-        <h2 class="text-center font-weight-light mb-3">Recent Posts</h2>
-        <div class="row py-4">
-            {% for latest_post in site.related_posts limit: 3 %}
-                <div class="col-md-4 px-3 pb-4 pb-md-0">
-                    <div class="w-100 px-4 py-4 rounded shadow-sm shadow-md-hover bg-light h-100">
-                        <a class="text-decoration-none" href="{{ latest_post.url | relative_url }}">
-                            <h5 class="border-bottom border-primary pb-2 font-weight-normal">{{ latest_post.title }}</h5>
-                        </a>
-                        <span class="small">{{ latest_post.author }}</span>
-                        <span class="mt-3 text-muted small post-ellipsis">{{ latest_post.excerpt }}</span>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+{% if site.related_posts.size >= 3 %}
+  <section class="py-4" id="events">
+      <div class="container">
+          <h2 class="text-center font-weight-light mb-3">Recent Posts</h2>
+          <div class="row py-4">
+              {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+              {% for latest_post in site.related_posts limit: 3 %}
+                  {% assign member_profile_link = latest_post.author_id | prepend: "/members/" | prepend: site.url %}
+                  <div class="col-md-4 px-3 pb-4 pb-md-0">
+                      <div class="w-100 px-4 py-4 rounded shadow-sm shadow-md-hover bg-light h-100">
+                          <a class="text-decoration-none" href="{{ latest_post.url | relative_url }}">
+                              <h5 class="border-bottom border-primary pb-2 font-weight-normal">{{ latest_post.title }}</h5>
+                          </a>
+                          <a href="{{ member_profile_link }}" class="small text-dark float-left">{{ latest_post.author }}</a>
+                          <p class="small text-dark">&nbsp; - &nbsp;{{ latest_post.date | date: date_format }}</p>
+                          <span class="mt-3 text-muted small post-ellipsis">{{ latest_post.excerpt }}</span>
+                      </div>
+                  </div>
+              {% endfor %}
+          </div>
+      </div>
+  </section>
+{% endif %}
 
 <section class="py-4 bg-light" id="team">
     <div class="container pb-4">
@@ -86,10 +106,10 @@ type_of_contributors:
             {% for member_hash in site.data.members %}
                 {% assign member = member_hash[1] %}
                 {% capture widgets %}
-                    {% include sections/member-badges.html list=member.badges %}
-                    {% include sections/member-social.html list=member.social %}
+                    {% include member-sections/member-badges.html list=member.badges %}
+                    {% include member-sections/member-social.html list=member.social %}
                 {% endcapture %}
-                {% include sections/member.html member=member widgets=widgets %}
+                {% include member-sections/member.html member=member widgets=widgets %}
             {% endfor %}
         </div>
         <div class="row d-flex justify-content-center pb-3 mx-auto">

@@ -51,7 +51,7 @@ $font-size-base: 1.15rem;
 $enable-responsive-font-sizes: true !important;
 
 // defining the color system for the website
-$theme-colors: ("primary": #3b86e2, "secondary": #f28518, "tertiary": #94d354, "info": #c0c4bd, "light": #f8f9fa, "dark": #151515, "grey": #6c757d, "mdcolor": #f2f3f2, "mdborder": #e7e8e9);
+$theme-colors: ("primary": #3b86e2, "secondary": #f28518, "tertiary": #94d354, "info": #c0c4bd, "light": #f8f9fa, "dark": #151515, "grey": #6c757d, "design": #b163cc, "mdcolor": #f2f3f2, "mdborder": #e7e8e9);
 
 // defining the spacing system for the website
 $spacer: 1rem;
@@ -80,13 +80,17 @@ $nav-bar-types: ("light": darken(map-get($theme-colors, "light"), 5%),
 @each $type,
 $color in $nav-bar-types {
   .nav-link-#{$type} {
-    transition: 0.15s ease-in-out;
     padding: $navbar-nav-link-padding-x;
 
     &:hover {
       background: $color !important;
       text-decoration: none;
     }
+  }
+
+  .nav-sublink-#{$type} {
+    background: $color !important;
+    padding: $navbar-nav-link-padding-x;
   }
 }
 
@@ -121,6 +125,11 @@ $icon in $alert-icons {
       font-weight: 900;
     }
   }
+}
+
+.badge-dark-grey, .badge-dark-grey:hover {
+  color: #3d3553;
+  background-color: lighten(map-get($theme-colors, "grey"), 35%) !important;
 }
 
 .icon-dropshadow {

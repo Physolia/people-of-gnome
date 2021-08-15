@@ -8,6 +8,13 @@ contributors:
   heading: Current Contributors
   description: These are the current Contributors of GNOME.
   notice: <strong>Notice:</strong> This list is updated manually and may not contain the real list of current and active GNOME Contributors.
+
+sections:
+  - title: Contributors
+    heading: Who makes GNOME possible?
+    description: The GNOME Project is possible thanks to the all the people that contribute to the Project. These are our Contributors. They are our Developers, Translators, Documentation Gurus, Testers, Issue Reporters and the many other people that envision the GNOME Desktop.
+    reverse: false
+    image: /assets/img/gnome-contributor.jpg
 ---
 
 {% include header.html %}
@@ -18,7 +25,8 @@ contributors:
         heading=page.heading
         description=page.description %}
 
-{% include contributors/who-makes-gnome-possible.html %}
+{% include about-sections.html 
+        list=page.sections %}
 
 <section class="pb-5 bg-white" id="notice">
     <div class="container">
@@ -39,10 +47,10 @@ contributors:
                 {% if member_hash[1].active == true %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
-                        {% include sections/member-badges.html list=member.badges %}
-                        {% include sections/member-social.html list=member.social %}
+                        {% include member-sections/member-badges.html list=member.badges %}
+                        {% include member-sections/member-social.html list=member.social %}
                     {% endcapture %}
-                    {% include sections/member.html member=member widgets=widgets %}
+                    {% include member-sections/member.html member=member widgets=widgets %}
                 {% endif %}
             {% endfor %}
         </div>

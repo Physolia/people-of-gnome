@@ -1,10 +1,10 @@
-{% assign member_conferences = site.data.events %}
+{% assign member_events = site.data.events %}
 {% assign member_page_link = include.member.id | prepend: "/members/" | prepend: site.url %}
 
 <ul class="list-unstyled list-inline text-small my-1 speaker-index">
     {% if include.speaker_index %}
         {% for entry in include.list | limit: 4 %}
-            {% assign conference = member_conferences | where: "id", entry | first %}
+            {% assign conference = member_events | where: "id", entry | first %}
             <li class="list-inline-item">
                 <a href="{{ conference.link }}" class="small badge badge-primary">{{ conference.name }}</a>
             </li>
@@ -14,7 +14,7 @@
         {% endif %}
     {% else %}
         {% for entry in include.list %}
-            {% assign conference = member_conferences | where: "id", entry | first %}
+            {% assign conference = member_events | where: "id", entry | first %}
             <li class="list-inline-item">
                 <a href="{{ conference.link }}" class="small badge badge-primary">{{ conference.name }}</a>
             </li>

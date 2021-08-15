@@ -1,19 +1,19 @@
 ---
-permalink: '/foundation/board'
+permalink: '/contributors/translators'
 
-heading: GNOME Board of Directors
-description: The leaders of the GNOME Foundation.
+heading: GNOME Translators
+description: They ensure GNOME to be more understandable and usable to all people around the world.
 
-foundation:
-  heading: Current Board of Directors
-  description: This is the current Board of Directors of the GNOME Foundation
+translators:
+  heading: Current GNOME Translators
+  description: These are the current translators involved in the localization process
 ---
 
 {% include header.html %}
 {% assign navbar_type = "dark" %}
 {% include navbar.html %}
 {% include subheader.html
-        image='/assets/img/wall-staff.svg'
+        image='/assets/img/placeholder.png'
         heading=page.heading
         description=page.description %}
 
@@ -21,13 +21,13 @@ foundation:
     <div class="container pb-4">
         <div class="row text-center d-flex justify-content-center">
             <div class="col-md-10 col-lg-7">
-                <h2 class="font-weight-light mb-3">{{ page.foundation.heading }}</h2>
-                <span class="text-muted">{{ page.foundation.description }}</span>
+                <h2 class="font-weight-light mb-3">{{ page.translators.heading }}</h2>
+                <span class="text-muted">{{ page.translators.description }}</span>
             </div>
         </div>
         <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
             {% for member_hash in site.data.members %}
-                {% if member_hash[1].active == true and member_hash[1].badges contains 'foundation-board' %}
+                {% if member_hash[1].badges contains 'translator' %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
                         {% include member-sections/member-social.html list=member.social %}
@@ -40,7 +40,7 @@ foundation:
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
-                           placeholder="Search for a Board of Director..."/>
+                           placeholder="Search for a Translator..."/>
                 </ul>
             </nav>
         </div>

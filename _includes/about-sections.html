@@ -1,0 +1,27 @@
+{% for section in include.list %}
+    <section class="py-5 {% if section.reverse == true %} bg-white {% else %} bg-light {% endif %}">
+        <div class="container">
+            <div class="row {% if section.reverse == true %} flex-row-reverse {% else %} flex-row {% endif %}">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-src="{{ section.image | prepend: site.url }}"
+                        class="img-fluid w-100 shadow lazyload"
+                        alt="GNOME {{ section.title }}"/>
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start px-3">
+                    <h6 class="text-secondary small font-weight-normal letter-spacing-custom">{{ section.title | upcase }}</h6>
+                    <h1 class="font-weight-light mb-3">{{ section.heading }}</h1>
+                    <span class="text-muted">
+                        {{ section.description }}
+                    </span>
+                    {% if section.link %}
+                        <div class="mt-4 right-arrow-text">
+                            <a class="text-muted font-weight-normal letter-spacing-custom pointer text-decoration-none" href="{{ section.link | prepend: site.url }}">Check them here</a>
+                            <span class="right-arrow"></spam>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}

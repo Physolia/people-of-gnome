@@ -10,15 +10,17 @@
             {% for type in include.list %}
                 <div class="col-md-6 p-0">
                     <div class="col p-3">
-                        <div class="col d-flex p-0 border border-primary rounded pointer shadow-sm-hover">
-                            <div class="bg-primary p-3 pt-4 rounded-left">
-                                <i class="{{ type.icon }} fa-inverse fa-fw fa-lg my-auto"></i>
+                        <a href="{{ type.link }}" class="text-decoration-none">
+                            <div class="col d-flex p-0 border border-primary rounded pointer shadow-sm-hover">
+                                <div class="bg-primary p-3 pt-4 rounded-left">
+                                    <i class="{{ type.icon }} fa-inverse fa-fw fa-lg my-auto"></i>
+                                </div>
+                                <div class="ml-1 p-2">
+                                    <h7>{{ type.title }}</h7>
+                                    <span class="text-muted small">{{ type.description | markdownify }}</span>
+                                </div>
                             </div>
-                            <div class="ml-1 p-2">
-                                <h7>{{ type.title }}</h7>
-                                <span class="text-muted small">{{ type.description | markdownify }}</span>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             {% endfor %}

@@ -4,7 +4,21 @@
     "name": "Staff",
     "class": "small badge",
     "icon": "fas fa-user-shield",
-    "link": "https://www.gnome.org/foundation/staff/"
+    "link": "https://www.gnome.org/foundation/staff"
+  },
+  {
+    "id": "foundation",
+    "name": "Foundation",
+    "class": "small badge badge-success",
+    "icon": false,
+    "link": "https://www.gnome.org/foundation"
+  },
+  {
+    "id": "foundation-board",
+    "name": "Board of Directors",
+    "class": "small badge badge-success",
+    "icon": "fa fa-award",
+    "link": "https://www.gnome.org/foundation/governance"
   },
   {
     "id": "contributor",
@@ -18,35 +32,47 @@
     "name": "Maintainer",
     "class": "small badge badge-danger",
     "icon": false,
-    "link": "https://gitlab.gnome.org"
+    "internal": true,
+    "link": "/contributors/maintainers"
   },
   {
-    "id": "mentor",
-    "name": "Mentor",
-    "class": "small badge badge-grey",
-    "icon": false,
-    "link": "/mentors"
+    "id": "developer",
+    "name": "Developer",
+    "class": "small badge badge-danger",
+    "icon": "fa fa-code",
+    "internal": true,
+    "link": "/contributors/developers"
   },
   {
-    "id": "mentee",
-    "name": "Mentee",
-    "class": "small badge badge-grey",
-    "icon": false,
-    "link": "/mentees"
+    "id": "documenter",
+    "name": "Documenter",
+    "class": "small badge badge-danger",
+    "icon": "fa fa-drafting-compass",
+    "internal": true,
+    "link": "/contributors/documenters"
   },
   {
-    "id": "foundation",
-    "name": "Foundation",
-    "class": "small badge badge-success",
-    "icon": false,
-    "link": "https://www.gnome.org/foundation/"
+    "id": "designer",
+    "name": "Designer",
+    "class": "small badge badge-design",
+    "icon": "fa fa-palette",
+    "internal": true,
+    "link": "/contributors/designer"
   },
   {
-    "id": "foundation-board",
-    "name": "Board of Directors",
-    "class": "small badge badge-success",
-    "icon": "fa fa-award",
-    "link": "https://www.gnome.org/foundation/governance"
+    "id": "engagement",
+    "name": "Engagement Team",
+    "class": "small badge badge-danger",
+    "icon": "fa fa-comments",
+    "internal": true,
+    "link": "/contributors/engagement-team"
+  },
+  {
+    "id": "translator",
+    "name": "Translator",
+    "class": "small badge",
+    "icon": "fas fa-globe",
+    "link": "https://l10n.gnome.org/"
   },
   {
     "id": "speaker",
@@ -56,10 +82,26 @@
     "link": "https://events.gnome.org"
   },
   {
-    "id": "translator",
-    "name": "Translator",
+    "id": "volunteer",
+    "name": "Event volunteer",
     "class": "small badge",
-    "icon": "fas fa-globe",
-    "link": "https://l10n.gnome.org/"
+    "icon": false,
+    "link": "https://events.gnome.org"
+  },
+  {
+    "id": "mentor",
+    "name": "Mentor",
+    "class": "small badge badge-dark-grey",
+    "icon": "fa fa-graduation-cap",
+    "internal": true,
+    "link": "/outreach/mentors"
+  },
+  {
+    "id": "mentee",
+    "name": "Mentee",
+    "class": "small badge badge-dark-grey",
+    "icon": "fa fa-graduation-cap",
+    "internal": true,
+    "link": "/outreach/mentees"
   }
 ]

@@ -1,0 +1,39 @@
+{% assign member_badges = site.data.badges %}
+
+<ul class="list-unstyled list-inline text-small my-0">
+    {% if include.member_profile %}
+        {% for entry in include.list %}
+            {% assign badge = member_badges | where: "id", entry | first %}
+            <li class="list-inline-item">
+                <a href="{{ badge.link }}" class="{{ badge.class }}">
+                    {{ badge.name }}
+                    {% if badge.icon %}
+                        <i class="{{ badge.icon }}"></i>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    {% else %}
+        {% for entry in include.list | limit: 4 %}
+            {% assign badge = member_badges | where: "id", entry | first %}
+            <li class="list-inline-item">
+                {% if badge.internal %}
+                    <a href="{{ badge.link | prepend: site.url }}" class="{{ badge.class }}">
+                        {{ badge.name }}
+                        {% if badge.icon %}
+                            <i class="{{ badge.icon }}"></i>
+                        {% endif %}
+                    </a>
+                {% else %}
+                    <a href="{{ badge.link }}" class="{{ badge.class }}">
+                        {{ badge.name }}
+                        {% if badge.icon %}
+                            <i class="{{ badge.icon }}"></i>
+                        {% endif %}
+                    </a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% endif %}
+</ul>
+</ul>

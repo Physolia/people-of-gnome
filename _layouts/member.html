@@ -43,45 +43,52 @@
                 </audio>
                 <a href="javascript:;" class="text-muted" id="audioControl" onclick="playclip();" data-toggle="tooltip" data-original-title="Hear it spoken">
                   <img src="{{ '/assets/img/audio-volume-icon.svg' | prepend: site.url }}" class="audio-img mt-1" />
-                  <i class="fa fa-2x fa-volume-down pronounce d-none"></i>
+                  <i class="fa fa-volume-down pronounce d-none"></i>
                 </a>
               </span>
             {% endif %}
           </div>
         </div>
-        <h4 class="text-muted">{{ page.title }}</h4>
+        {% if page.title %}
+          <section class="py-1">
+            <h4 class="text-muted">{{ page.title }}</h4>
+          </section>
+        {% endif %}
         <section class="py-1">
-          {% include sections/member-badges.html list=page.badges %}
-          {% include sections/member-conferences.html list=page.conferences %}
+          {% include member-sections/member-badges.html list=page.badges member_profile="true" %}
+          {% include member-sections/member-events.html list=page.events %}
         </section>
         <section class="py-1">
-          {% include sections/member-social.html list=page.social %}
+          {% include member-sections/member-social.html list=page.social %}
         </section>
-        <section class="py-1">
-          <p>{{ page.description }}</p>
-        </section>
+        {% if page.description %}
+          <section class="py-1">
+            <p>{{ page.description }}</p>
+          </section>
+        {% endif %}
         {% if page.projects %}
           <section class="py-4">
-            <h5 class="text-primary small font-weight-normal letter-spacing-custom pl-0">MAINTAINER OF</h5>
+            <h5 class="text-primary small font-weight-normal letter-spacing-custom pl-0">{% if page.badges contains 'maintainer' %}MAINTAINER {% else %}CONTRIBUTOR {% endif %}OF</h5>
             {% for project in page.projects %}
               {% assign project_info = site.data.projects | where:"id", project | first %}
               {% if project_info %}
                 <div class="row pl-3">
-                  <div class="row no-gutters d-flex justify-content-start">
-                    <h6 class="d-none d-md-block col-12 text-primary small font-weight-normal letter-spacing-custom pl-0">
-                      {{ page.maintainers.subheading | upcase }}</h6>
-                    <div class="row no-gutters d-flex justify-content-start pt-1">
+                    <div class="row no-gutters d-flex justify-content-start pt-3">
                       <div class="col-12 col-sm-auto pb-2 mr-3">
                         <img data-src="{{ project_info.icon }}" class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload" style="opacity:.8;" alt="Fonts">
                       </div>
                       <div class="col">
                         <h6 class="d-block pl-0 d-md-none col-12 text-primary small font-weight-normal letter-spacing-custom">
                           {{ page.maintainers.subheading | upcase }}</h6>
-                        <h4 class="font-weight-light mb-1">{{ project_info.name }}</h4>
+                        <h4 class="font-weight-light mb-1">
+                          <a href="{{ project_info.repository }}" class="text-dark">
+                            {{ project_info.name }}
+                          </a>
+                        </h4>
                         <small class="text-muted">{{ project_info.description }}</small>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               {% endif %}
             {% endfor %}
@@ -89,7 +96,7 @@
         {% endif %}
       </div>
     </div>
-    {% include sections/member-posts.html %}
+    {% include member-sections/member-posts.html %}
   </div>
 </section>
 

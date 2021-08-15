@@ -1,5 +1,5 @@
 ---
-permalink: '/mentors'
+permalink: '/outreach/mentors'
 heading: Outreach Mentors
 description: Find out more about the mentors of Google Summer of Code & Outreachy
 ---
@@ -8,13 +8,13 @@ description: Find out more about the mentors of Google Summer of Code & Outreach
 {% assign navbar_type= "dark" %}
 {% include navbar.html %}
 {% include subheader.html
-  image='/assets/img/mentors.png'
+  image='/assets/img/placeholder.png'
   heading=page.heading
   description=page.description %}
 {% assign gsoc_editions = site.data.activities.gsoc %}
 {% assign outreachy_editions = site.data.activities.outreachy %}
 
-<section class="py-4 bg-light" id="outreachSection">
+<section class="pt-5 pb-4 bg-light" id="outreachSection">
   <div class="container">
     <div class="top-container justify-content-center">
       <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter mentor-pagination"
@@ -54,10 +54,10 @@ description: Find out more about the mentors of Google Summer of Code & Outreach
                   {% if member_hash[1].mentor contains gsoc_year %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
-                      {% include sections/member-badges.html list=member.badges %}
-                      {% include sections/member-social.html list=member.social %}
+                      {% include member-sections/member-badges.html list=member.badges %}
+                      {% include member-sections/member-social.html list=member.social %}
                     {% endcapture %}
-                    {% include sections/member.html member=member widgets=widgets %}
+                    {% include member-sections/member.html member=member widgets=widgets %}
                   {% endif %}
                 {% endif %}
               {% endfor %}
@@ -76,9 +76,9 @@ description: Find out more about the mentors of Google Summer of Code & Outreach
                   {% if member_hash[1].mentor contains outreachy_year %}
                     {% assign member = member_hash[1] %}
                     {% capture widgets %}
-                      {% include sections/member-social.html list=member.social %}
+                      {% include member-sections/member-social.html list=member.social %}
                     {% endcapture %}
-                    {% include sections/member.html member=member widgets=widgets %}
+                    {% include member-sections/member.html member=member widgets=widgets %}
                   {% endif %}
                 {% endif %}
               {% endfor %}

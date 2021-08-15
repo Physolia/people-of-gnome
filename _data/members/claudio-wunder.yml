@@ -6,13 +6,13 @@ title: Community Manager
 badges:
   - contributor
   - foundation
+  - developer
   - speaker
   - mentor
-  - mentee
 active: true
 projects:
   - gnome-events
-conferences:
+events:
   - guadec-2018
 mentor:
   - gsoc-2021 

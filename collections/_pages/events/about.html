@@ -1,0 +1,42 @@
+---
+permalink: '/events'
+
+heading: Events
+description: Find out the list of events managed by The GNOME Foundation.
+
+sections:
+    - title: Events
+      heading: What are GNOME Events?
+      description: The GNOME Events are conferences, booths, release parties, and workshops that are held or organized or approved by the GNOME Foundation. Being the most notorious ones the GNOME Asia, GUADEC and GUADEC Africa.
+      reverse: false
+      image: /assets/img/gnome-events.jpg
+    - title: Speakers
+      heading: Who are the GNOME Speakers?
+      description: The GNOME Speakers are Contributors or Volunteers or Sponsors that held any kind of workshop, talk, or activity during a GNOME Event.
+      reverse: true
+      image: /assets/img/gnome-speaker.jpg
+      link: /events/speakers
+    - title: Volunteers
+      heading: Who are the GNOME Event Volunteers?
+      description: The GNOME Event Volunteers are Volunteers that help in successful running of any kind of workshop, talk, or activity during a GNOME Event.
+      reverse: false
+      image: /assets/img/placeholder.png
+      link: /events/volunteers
+---
+
+{% include header.html %}
+{% assign navbar_type = "dark" %}
+{% include navbar.html %}
+
+{% include about-subheader.html
+    image='/assets/img/placeholder.png'
+    heading=page.heading
+    description=page.description %}
+
+{% include about-sections.html
+    list=page.sections %}
+
+{% include footer.html %}
+{% include scripts.html %}
+
+<script src="{{ '/assets/js/go-to-top.js' | prepend: site.url }}"></script>
