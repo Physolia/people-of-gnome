@@ -18,7 +18,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
         {% assign text_color = 'dark' %}
         {% assign bg_color = 'light' %}
     {% when 'transparent' %}
-        {% assign text_color = 'white' %}
+        {% assign text_color = 'dark' %}
         {% assign bg_color = 'transparent' %}
     {% else %}
         {% assign text_color = 'dark' %}
@@ -26,16 +26,8 @@ to make changes related to the content, edit the `_data/navigation.yml`.
 {% endcase %}
 <header class="navbar small bg-{{ bg_color }}">
     <nav class="container navbar-expand-md px-0 px-md-3">
-        <a href="{{ site.url }}" class="navbar-brand text-{{ text_color }}">
-            {% if handle == 'dark' %}
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="{{ '/assets/img/gnome-logo.svg' | prepend: site.url }}" class="pr-2 lazyload"
-                     style="max-width:100px;" alt="GNOME Logo"/>
-            {% elsif handle == 'light' or 'white' or 'transparent' %}
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="{{ '/assets/img/gnome-dark-logo.svg' | prepend: site.url }}" class="pr-2 lazyload"
-                     style="max-width:100px;" alt="GNOME Logo"/>
-            {% endif %}
+        <a href="{{ site.url }}" class="pr-2 navbar-brand text-{{ text_color }}">
+            {% include gnome-logo.svg %}
         </a>
         <a class="btn navbar-toggler border-0 bg-{{ text_color }}" role="button" data-toggle="collapse"
            data-target="#navbarSupportedContent" href="#">
