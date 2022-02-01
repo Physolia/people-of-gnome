@@ -35,7 +35,7 @@
     "name": "GNOME Clocks",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-clocks/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.clocks.svg",
     "description": "Clocks for world times, plus alarms, stopwatch and a timer",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-clocks/",
+    "repository": "https://apps.gnome.org/app/org.gnome.clocks/",
     "maintainers": [
       "zander-brown"
     ],
@@ -61,7 +61,7 @@
     "name": "Palette",
     "icon": "https://gitlab.gnome.org/World/design/palette/-/raw/master/logo.png",
     "description": "Colour Palette tool",
-    "repository": "https://gitlab.gnome.org/World/design/palette",
+    "repository": "https://apps.gnome.org/app/org.gnome.design.Palette/",
     "maintainers": [
       "zander-brown"
     ],
@@ -89,7 +89,7 @@
     "name": "Settings",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-control-center/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Settings.svg",
     "description": "GNOME's main interface to configure various aspects of the desktop",
-    "repository": "hhttps://gitlab.gnome.org/GNOME/gnome-control-center",
+    "repository": "https://apps.gnome.org/app/org.gnome.Settings/",
     "maintainers": [
       "felipeborges"
     ],
@@ -115,7 +115,7 @@
     "name": "GNOME Web",
     "icon": "https://gitlab.gnome.org/uploads/-/system/project/avatar/1906/org.gnome.Epiphany.png",
     "description": " A GNOME web browser based on the WebKit rendering engine",
-    "repository": "https://gitlab.gnome.org/GNOME/epiphany",
+    "repository": "https://apps.gnome.org/app/org.gnome.Epiphany/",
     "maintainers": [
       "carlos-garcia-campos",
       "jan-michael-brummer",
@@ -132,7 +132,7 @@
     "name": "Nautilus",
     "icon": "https://gitlab.gnome.org/GNOME/nautilus/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Nautilus.svg",
     "description": "File manager for GNOME",
-    "repository": "https://gitlab.gnome.org/GNOME/nautilus",
+    "repository": "https://apps.gnome.org/app/org.gnome.Nautilus/",
     "maintainers": [
       "antonio-fernandes",
       "ondrej-holy"
@@ -147,7 +147,7 @@
     "name": "Eye of GNOME",
     "icon": "https://gitlab.gnome.org/GNOME/eog/-/raw/master/data/icons/scalable/apps/org.gnome.eog.svg",
     "description": "An image viewing and cataloging program",
-    "repository": "https://gitlab.gnome.org/GNOME/eog",
+    "repository": "https://apps.gnome.org/app/org.gnome.eog/",
     "maintainers": [
       "felix-riemann"
     ],
@@ -160,7 +160,7 @@
     "name": "Cheese",
     "icon": "https://gitlab.gnome.org/GNOME/cheese/-/raw/master/data/icons/scalable/org.gnome.Cheese.svg",
     "description": "A Webcam application for taking photos and videos",
-    "repository": "https://gitlab.gnome.org/GNOME/cheese",
+    "repository": "https://apps.gnome.org/app/org.gnome.Cheese/",
     "maintainers": [
       "david-king"
     ],
@@ -173,7 +173,7 @@
     "name": "GEdit - The GNOME text editor",
     "icon": "https://gitlab.gnome.org/GNOME/gedit/-/raw/master/logo.png",
     "description": "The text editor of the GNOME desktop environment",
-    "repository": "https://gitlab.gnome.org/GNOME/gedit",
+    "repository": "https://apps.gnome.org/app/org.gnome.gedit/",
     "maintainers": [
       "sebastien-wilmet"
     ],
@@ -255,7 +255,7 @@
     "name": "Totem",
     "icon": "https://gitlab.gnome.org/GNOME/totem/-/raw/master/data/icons/scalable/org.gnome.Totem.svg",
     "description": "Movie player for the GNOME desktop based on GStreamer",
-    "repository": "https://gitlab.gnome.org/GNOME/totem",
+    "repository": "https://apps.gnome.org/en-GB/app/org.gnome.Totem/",
     "maintainers": [
       "bastien-nocera",
       "tim-philipp-muller"
@@ -337,7 +337,7 @@
     "name": "Weather",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-weather/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Weather.svg",
     "description": "Weather App for monitoring current weather conditions",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-weather",
+    "repository": "https://apps.gnome.org/app/org.gnome.Weather/",
     "maintainers": [
       "vitaly-dyachkov"
     ],
@@ -425,7 +425,7 @@
     "name": "GNOME Fonts",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-font-viewer/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.font-viewer.svg",
     "description": "Application to view fonts on your system",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-font-viewer",
+    "repository": "https://apps.gnome.org/app/org.gnome.font-viewer/",
     "maintainers": [
       "cosimo-cecchi"
     ],
@@ -438,7 +438,7 @@
     "name": "Baobab",
     "icon": "https://gitlab.gnome.org/GNOME/baobab/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.baobab.svg",
     "description": "GNOME Disk Usage Analyzer",
-    "repository": "https://gitlab.gnome.org/GNOME/baobab",
+    "repository": "https://apps.gnome.org/app/org.gnome.baobab/",
     "maintainers": [
       "paolo-borelli",
       "stefano-facchini"
@@ -453,7 +453,7 @@
     "name": "Seahorse",
     "icon": "https://gitlab.gnome.org/GNOME/seahorse/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.seahorse.Application.svg",
     "description": "A password and encryption key manager for GNOME",
-    "repository": "https://gitlab.gnome.org/GNOME/seahorse",
+    "repository": "https://apps.gnome.org/app/org.gnome.seahorse.Application/",
     "maintainers": [
       "daiki-ueno",
       "niels-de-graef"
@@ -532,7 +532,7 @@
     "name": "Calculator",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-calculator/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Calculator.svg",
     "description": "Calculator for solving mathematical equations",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-calculator",
+    "repository": "https://apps.gnome.org/app/org.gnome.Calculator/",
     "maintainers": [
       "alberto-ruiz",
       "robert-roth"
@@ -560,7 +560,7 @@
     "name": "GNOME Contacts",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-contacts/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Contacts.svg",
     "description": "Contacts manager for GNOME",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-contacts",
+    "repository": "https://apps.gnome.org/app/org.gnome.Contacts/",
     "maintainers": [
       "niels-de-graef"
     ],
@@ -573,7 +573,7 @@
     "name": "GNOME Boxes",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-boxes/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Boxes.svg",
     "description": "A simple GNOME 3 application to access remote or virtual systems",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-boxes",
+    "repository": "https://apps.gnome.org/app/org.gnome.Boxes/",
     "maintainers": [
       "alexander-larsson",
       "felipeborges"
@@ -588,7 +588,7 @@
     "name": "Connections",
     "icon": "https://gitlab.gnome.org/GNOME/connections/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Connections.svg",
     "description": "A remote desktop client for the GNOME desktop environment",
-    "repository": "https://gitlab.gnome.org/GNOME/connections",
+    "repository": "https://apps.gnome.org/app/org.gnome.Connections/",
     "maintainers": [
       "felipeborges"
     ],
@@ -601,7 +601,7 @@
     "name": "Builder",
     "icon": "https://gitlab.gnome.org/uploads/-/system/project/avatar/426/builder.png",
     "description": "IDE for writing GNOME-based softwares",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-builder",
+    "repository": "https://apps.gnome.org/app/org.gnome.Builder/",
     "maintainers": [
       "christian-hergert",
       "sebastien-lafargue"
@@ -642,7 +642,7 @@
     "name": "GNOME Calendar",
     "icon": "https://gitlab.gnome.org/GNOME/gnome-calendar/-/raw/master/data/icons/hicolor/scalable/apps/org.gnome.Calendar.svg",
     "description": "Calendar application for GNOME",
-    "repository": "https://gitlab.gnome.org/GNOME/gnome-calendar",
+    "repository": "https://apps.gnome.org/app/org.gnome.Calendar/",
     "maintainers": [
       "felipe-augusto",
       "georges-basile-stavracas-neto",
@@ -729,7 +729,7 @@
     "name": "Polari",
     "icon": "https://gitlab.gnome.org/GNOME/polari/-/raw/main/data/icons/hicolor/scalable/apps/org.gnome.Polari.svg",
     "description": "Polari is a simple IRC Client that is designed to integrate seamlessly with GNOME 3",
-    "repository": "https://gitlab.gnome.org/GNOME/polari",
+    "repository": "https://apps.gnome.org/app/org.gnome.Polari/",
     "maintainers": [
       "fmuellner"
     ],
