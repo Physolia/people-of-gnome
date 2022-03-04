@@ -803,3 +803,17 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
   font-weight: 600;
 }
 
+
+.subheader-image{
+  height: 300px; 
+  width: 100%;
+  object-fit: contain;
+}
+
+.subheader {
+  height: 300px; 
+  width: 100%;
+  @media screen and (max-width: 768px) {
+      height: auto; 
+  }
+}
