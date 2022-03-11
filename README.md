@@ -164,7 +164,7 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 - Installing Dependencies Windows
   - Please use [WSL](https://docs.microsoft.com/en-us/windows/wsl/)
 - Installing Dependencies in macOS
-  ```
+  ```bash
   # install dependencies
   brew install node@16 rsync gnupg2
 
