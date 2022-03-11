@@ -152,6 +152,9 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   # install RVM (Ruby version manager)
   \curl -sSL https://get.rvm.io | bash -s stable
 
+  # include rvm here
+  source ~/.rvm/scripts/rvm
+
   # install ruby 2.6.8
   rvm install 2.6.8
 
@@ -163,13 +166,19 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 - Installing Dependencies in macOS
   ```
   # install dependencies
-  brew install node rsync gnupg2
+  brew install node@16 rsync gnupg2
+
+  # force link node@16
+  brew link --force --overwrite node@16
 
   # install rvm gpg keys
   gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
   # install RVM (Ruby version manager)
   \curl -sSL https://get.rvm.io | bash -s stable
+
+  # include rvm here
+  source ~/.rvm/scripts/rvm
 
   # install ruby 2.6.8
   rvm install 2.6.8
