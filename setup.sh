@@ -6,7 +6,7 @@ BUNDLER_PATH=$GEM_PATH/bin
 echo -e "\n💡 \033[1;34minstalling node dependencies \033[0m\n"
 
 # install npm dependencies
-npx yarn install ---cache .npm --prefer-offline --frozen-lockfile
+npx yarn install --cache .npm --prefer-offline --frozen-lockfile
 
 echo -e "\n💡 \033[1;34minstalling bundler locally \033[0m\n"
 
