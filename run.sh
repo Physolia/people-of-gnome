@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# set directories
+CURRENT_DIR=$(pwd)
+GEM_PATH=$CURRENT_DIR/.bundle
+BUNDLER_PATH=$GEM_PATH/bin
+
 # include rvm here
 source ~/.rvm/scripts/rvm
 

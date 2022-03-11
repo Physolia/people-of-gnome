@@ -1,10 +1,12 @@
 #!/bin/bash
 
+# set directories
+CURRENT_DIR=$(pwd)
+GEM_PATH=$CURRENT_DIR/.bundle
+BUNDLER_PATH=$GEM_PATH/bin
+
 # include rvm here
 source ~/.rvm/scripts/rvm
-
-GEM_PATH=.bundle
-BUNDLER_PATH=$GEM_PATH/bin
 	
 echo -e "\n💡 \033[1;34minstalling node dependencies \033[0m\n"
 
@@ -20,7 +22,7 @@ rvm install 2.6.8
 rvm use 2.6.8
 
 # install bundler
-gem install bundler --install-dir=$GEM_PATH --quiet --no-user-install
+ $GEM_PATH --quiet --no-user-install
 
 echo -e "\n💡 \033[1;34minstalling bundler packages locally \033[0m\n"
 
