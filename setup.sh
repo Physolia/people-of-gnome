@@ -22,7 +22,7 @@ rvm install 2.6.8
 rvm use 2.6.8
 
 # install bundler
- $GEM_PATH --quiet --no-user-install
+gem install bundler --install-dir=$GEM_PATH --quiet --no-user-install
 
 echo -e "\n💡 \033[1;34minstalling bundler packages locally \033[0m\n"
 
