@@ -134,24 +134,36 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   ```bash
   # update repositories & install dependencies 
   sudo apt update
-  sudo apt install -y build-essential ruby ruby-dev bash git rsync curl
+  sudo apt install -y build-essential bash git rsync curl gnupg2
 
   # prepare to install nodejs and yarn
   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+
+  # install rvm gpg keys
+  gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
   # add yarn package to whitelist
   echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
   # install nodejs and yarn
   sudo apt update && sudo apt install -y nodejs yarn
-  sudo gem update --system '2.6.8' 
+
+  # install RVM (Ruby version manager)
+  \curl -sSL https://get.rvm.io | bash -s stable
   ```
 - Installing Dependencies Windows
   - Please use [WSL](https://docs.microsoft.com/en-us/windows/wsl/)
 - Installing Dependencies in macOS
   ```
-  brew install node rsync
+  # install dependencies
+  brew install node rsync gnupg2
+
+  # install rvm gpg keys
+  gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+  # install RVM (Ruby version manager)
+  \curl -sSL https://get.rvm.io | bash -s stable
   ```
 
 ### Setting up the repository
