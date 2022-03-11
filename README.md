@@ -156,7 +156,7 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   source ~/.rvm/scripts/rvm
 
   # install ruby 2.6.8
-  rvm install 2.6.8
+  rvm install 2.7.5
 
   # use ruby 2.6.8
   rvm use 2.6.8
@@ -166,7 +166,7 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 - Installing Dependencies in macOS
   ```bash
   # install dependencies
-  brew install node@16 rsync gnupg2
+  brew install node@16 rsync gnupg2 openssl
 
   # force link node@16
   brew link --force --overwrite node@16
@@ -180,11 +180,11 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   # include rvm here
   source ~/.rvm/scripts/rvm
 
-  # install ruby 2.6.8
-  rvm install 2.6.8
+  # install ruby 2.7.5
+  rvm install 2.7.5
 
-  # use ruby 2.6.8
-  rvm use 2.6.8
+  # use ruby 2.7.5
+  rvm use 2.7.5
   ```
 
 ### Setting up the repository
