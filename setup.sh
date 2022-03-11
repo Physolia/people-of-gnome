@@ -15,12 +15,6 @@ yarn install --cache .npm --prefer-offline --frozen-lockfile
 
 echo -e "\n💡 \033[1;34minstalling bundler locally \033[0m\n"
 
-# install ruby 2.6.8
-rvm install 2.6.8
-
-# use ruby 2.6.8
-rvm use 2.6.8
-
 # install bundler
 gem install bundler --install-dir=$GEM_PATH --quiet --no-user-install
 

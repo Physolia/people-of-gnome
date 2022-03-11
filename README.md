@@ -151,6 +151,12 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 
   # install RVM (Ruby version manager)
   \curl -sSL https://get.rvm.io | bash -s stable
+
+  # install ruby 2.6.8
+  rvm install 2.6.8
+
+  # use ruby 2.6.8
+  rvm use 2.6.8
   ```
 - Installing Dependencies Windows
   - Please use [WSL](https://docs.microsoft.com/en-us/windows/wsl/)
@@ -164,6 +170,12 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 
   # install RVM (Ruby version manager)
   \curl -sSL https://get.rvm.io | bash -s stable
+
+  # install ruby 2.6.8
+  rvm install 2.6.8
+
+  # use ruby 2.6.8
+  rvm use 2.6.8
   ```
 
 ### Setting up the repository
