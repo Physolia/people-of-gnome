@@ -155,11 +155,11 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   # include rvm here
   source ~/.rvm/scripts/rvm
 
-  # install ruby 2.6.8
+  # install ruby 2.7.5
   rvm install 2.7.5
 
-  # use ruby 2.6.8
-  rvm use 2.6.8
+  # use ruby 2.7.5
+  rvm use 2.7.5
   ```
 - Installing Dependencies Windows
   - Please use [WSL](https://docs.microsoft.com/en-us/windows/wsl/)
