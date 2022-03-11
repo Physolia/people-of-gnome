@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-sass": "node-sass -w assets/scss/ -o assets/css/ --output-style compressed",
     "compile-sass": "node-sass assets/scss/ -o assets/css/ --output-style compressed",
-    "minify-html": "run(){ html-minifier --collapse-whitespace --remove-comments --remove-tag-whitespace $1 -o $1; }; run"
+    "minify-html": "run(){ html-minifier --collapse-whitespace --remove-comments --remove-tag-whitespace $1 -o $1; }; run",
+    "lint": "yarn eslint && yarn prettier --write"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.6.0",
-    "editorconfig": "^0.15.3",
     "html-minifier": "^4.0.0",
     "jquery-slim": "^3.0.0",
     "lazysizes": "^5.3.2",
@@ -35,6 +35,7 @@
   "author": "GNOME Engagement",
   "license": "SEE LICENSE IN LICENSE.txt",
   "devDependencies": {
-    "eslint": "^8.10.0"
+    "eslint": "^8.10.0",
+    "prettier": "^2.5.1"
   }
 }
