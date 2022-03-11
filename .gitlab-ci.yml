@@ -1,4 +1,4 @@
-image: ruby:2.5
+image: ruby:2.6.8
 
 variables:
   JEKYLL_ENV: production
@@ -17,14 +17,10 @@ before_script:
   - apt-get install -y build-essential bash git rsync curl gnupg2
   - curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
   - curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg >/dev/null
-  - gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
   - echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | tee /etc/apt/sources.list.d/yarn.list
   - apt-get update -y
   - apt-get install -y nodejs yarn
-  - \curl -sSL https://get.rvm.io | bash -s stable
   - source /root/.bashrc
-  - rvm install 2.6.8
-  - rvm use 2.6.8
   - chmod +x setup.sh && bash setup.sh
 
 test:
