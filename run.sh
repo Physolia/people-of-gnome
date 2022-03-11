@@ -8,9 +8,6 @@ BUNDLER_PATH=$GEM_PATH/bin
 # include rvm here
 source ~/.rvm/scripts/rvm
 
-# use ruby 2.6.8
-rvm use 2.6.8
-
 GEM_PATH=.bundle
 BUNDLER_PATH=$GEM_PATH/bin
 
