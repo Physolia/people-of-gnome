@@ -23,6 +23,8 @@ before_script:
   - apt-get install -y nodejs yarn
   - \curl -sSL https://get.rvm.io | bash -s stable
   - source /root/.bashrc
+  - rvm install 2.6.8
+  - rvm use 2.6.8
   - chmod +x setup.sh && bash setup.sh
 
 test:
