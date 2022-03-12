@@ -20,7 +20,7 @@ yarn install --cache .npm --prefer-offline --frozen-lockfile
 echo -e "\n💡 \033[1;34minstalling bundler locally \033[0m\n"
 
 # uninstall all other bundler versions
-gem uninstall bundler --all || yes
+gem uninstall bundler --all
 
 # install bundler
 gem install bundler:2.3.8 --install-dir=$GEM_PATH --quiet --no-user-install
