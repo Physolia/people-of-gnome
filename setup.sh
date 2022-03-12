@@ -19,7 +19,7 @@ yarn install --cache .npm --prefer-offline --frozen-lockfile
 echo -e "\n💡 \033[1;34minstalling bundler locally \033[0m\n"
 
 # install bundler
-gem install bundler --install-dir=$GEM_PATH --quiet --no-user-install
+gem install bundler:2.3.8 --install-dir=$GEM_PATH --quiet --no-user-install
 
 echo -e "\n💡 \033[1;34minstalling bundler packages locally \033[0m\n"
 

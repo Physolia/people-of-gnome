@@ -19,7 +19,6 @@ before_script:
   - echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | tee /etc/apt/sources.list.d/yarn.list
   - apt-get update -y
   - apt-get install -y rbenv nodejs yarn rbenv ruby-build
-  - rbenv init
   - git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
   - rbenv install 2.7.5
   - source /root/.bashrc
