@@ -6,10 +6,11 @@ GEM_PATH=$CURRENT_DIR/.bundle
 BUNDLER_PATH=$GEM_PATH/bin
 
 # initialize rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # set the ruby version locally to 2.7.5
-rbenv global 2.7.5
+rbenv local 2.7.5
 	
 echo -e "\n💡 \033[1;34minstalling node dependencies \033[0m\n"
 
@@ -17,6 +18,9 @@ echo -e "\n💡 \033[1;34minstalling node dependencies \033[0m\n"
 yarn install --cache .npm --prefer-offline --frozen-lockfile
 
 echo -e "\n💡 \033[1;34minstalling bundler locally \033[0m\n"
+
+# uninstall all other bundler versions
+gem uninstall bundler --all || yes
 
 # install bundler
 gem install bundler:2.3.8 --install-dir=$GEM_PATH --quiet --no-user-install
