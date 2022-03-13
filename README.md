@@ -143,7 +143,7 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
   # update repositories & install nodejs, yarn and rbenv
-  sudo apt update && rbenv nodejs yarn ruby-build
+  sudo apt update && sudo apt install rbenv nodejs yarn ruby-build
 
   # initialize rbenv
   rbenv init
