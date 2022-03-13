@@ -1,0 +1,37 @@
+---
+id: test-profile
+name: Asmit Malakannawar
+nick: asmitm
+title: Tech enthusiast
+pronoun: he/him
+country: 😉
+description: I'm a B.Tech Computer Science and Business Systems student. I am also a Cloud Enthusiast and a learner, and deeply passionate about Software Development & Innovations.
+avatar: https://avatars.githubusercontent.com/u/81866614?v=4
+badges: 
+  - contributor
+  - developer
+  - maintainer
+  - mentee
+active: true
+projects: 
+  - people-of-gnome
+events: 
+  - guadec-2001
+  - guadec-2003
+mentor: 
+  - gsoc-2021
+  - outreachy-2019
+mentee: 
+  - gsoc-2021
+  - outreachy-2019
+social:
+  blog: 
+  twitter: Asmit_2952
+  gitlab: Asmit2952
+  matrix: 
+  instagram: asmitmalakannawar
+  dev_to: asmit2952
+  github: Asmit2952
+  mastodon: 
+  keybase: 
+---
