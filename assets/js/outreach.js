@@ -1,16 +1,20 @@
+---
+---
 let date = new Date();
-let currentYear = date.getFullYear();
+const editions = Object.keys({{ site.data.activities.gsoc.editions | jsonify }});
+const currentYear = editions[editions.length - 1];
+
 let type = "all";
 
-let gsocSection = outreachSection.querySelector(`.gsoc-section-${date.getFullYear()}`);
-let outreachySection = outreachSection.querySelector(`.outreachy-section-${date.getFullYear()}`);
-let hr = outreachSection.querySelector(`.horizontal-rule-${date.getFullYear()}`);
+let gsocSection = outreachSection.querySelector(`.gsoc-section-${currentYear}`);
+let outreachySection = outreachSection.querySelector(`.outreachy-section-${currentYear}`);
+let hr = outreachSection.querySelector(`.horizontal-rule-${currentYear}`);
 
 let gsocList = gsocSection.querySelector(".gnome-members-list");
 let outreachyList = outreachySection.querySelector(".gnome-members-list");
 
-let gsocMessage = outreachSection.querySelector(`.gsoc-message-${date.getFullYear()}`);
-let outreachyMessage = outreachSection.querySelector(`.outreachy-message-${date.getFullYear()}`);
+let gsocMessage = outreachSection.querySelector(`.gsoc-message-${currentYear}`);
+let outreachyMessage = outreachSection.querySelector(`.outreachy-message-${currentYear}`);
 
 gsocMessage.innerHTML = gsocList.innerHTML.replace(/\s/g,'')[0] === undefined ? "No entries found." : "";
 outreachyMessage.innerHTML = outreachyList.innerHTML.replace(/\s/g,'')[0] === undefined ? "No entries found." : "";
