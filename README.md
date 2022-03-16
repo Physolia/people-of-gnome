@@ -74,6 +74,8 @@ The data used by the site is stored in the form of following files:
 
 Create a new YAML file on `_data/members/` directory containing the following entries. You can also look at [this template](_data/member-template.yml)
 
+For more detailed info on what each field means, please go through this wiki page [here](https://gitlab.gnome.org/Teams/Engagement/websites/people-of-gnome/-/wikis/Adding-yourself-to-the-Website).
+
 | Field         | Description                                       | Example                 | Type                                                    |
 | ------------- |:-------------------------------------------------:| -----------------------:| ------------------------------------------------------- |
 | ID            | Your file name                                    | member-template         | string                                                  |
