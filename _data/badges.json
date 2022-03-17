@@ -2,7 +2,7 @@
   {
     "id": "staff",
     "name": "Staff",
-    "class": "small badge",
+    "class": "small badge badge-primary",
     "icon": "fas fa-user-shield",
     "link": "https://www.gnome.org/foundation/staff"
   },
@@ -10,7 +10,7 @@
     "id": "foundation",
     "name": "Foundation",
     "class": "small badge badge-success",
-    "icon": false,
+    "icon": "fas fa-sitemap",
     "link": "https://www.gnome.org/foundation"
   },
   {
@@ -24,14 +24,14 @@
     "id": "contributor",
     "name": "Contributor",
     "class": "small badge badge-secondary",
-    "icon": false,
+    "icon": "fas fa-code-branch",
     "link": "https://gitlab.gnome.org"
   },
   {
     "id": "maintainer",
     "name": "Maintainer",
     "class": "small badge badge-danger",
-    "icon": false,
+    "icon": "fas fa-wrench",
     "internal": true,
     "link": "/contributors/maintainers"
   },
@@ -77,15 +77,15 @@
   {
     "id": "speaker",
     "name": "Speaker",
-    "class": "small badge",
+    "class": "small badge badge-primary",
     "icon": "fas fa-comment",
     "link": "https://events.gnome.org"
   },
   {
     "id": "volunteer",
-    "name": "Event volunteer",
+    "name": "Event Volunteer",
     "class": "small badge",
-    "icon": false,
+    "icon": "fas fa-calendar-check",
     "link": "https://events.gnome.org"
   },
   {

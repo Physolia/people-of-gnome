@@ -17,7 +17,7 @@
     "url": "https://gitlab.gnome.org/Teams/Engagement/websites/people-of-gnome/issues"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "bootstrap": "^4.6.0",
     "html-minifier": "^4.0.0",
     "jquery-slim": "^3.0.0",
