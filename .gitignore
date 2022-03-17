@@ -6,6 +6,7 @@ _site
 
 # Ruby Specific Artifacts
 .bundle
+.ruby-version
 
 # Node Specific Artifacts
 node_modules/
