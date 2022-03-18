@@ -1,17 +1,33 @@
-const btnTop = jQuery('#btn-go-to-top');
+const scrollToTop = document.getElementById('btn-go-to-top')
 
-jQuery(window).scroll(function () {
-    if (jQuery(window).scrollTop() < 400) {
-        btnTop.addClass('d-none');
-    } else {
-        btnTop.removeClass('d-none');
-    }
-});
+let lastKnownScrollPosition = 0;
+let ticking = false;
 
-btnTop.on('click', function (e) {
+scrollToTop.addEventListener('click', function (e) {
     e.preventDefault();
 
-    jQuery('html, body').animate({
-        scrollTop: 0
-    });
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
 });
+
+document.addEventListener('scroll', function (e) {
+    lastKnownScrollPosition = window.scrollY;
+    
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            if (lastKnownScrollPosition < 400) {
+              scrollToTop.classList.add('d-none')
+            }
+            else {
+              scrollToTop.classList.remove('d-none')
+            }
+            ticking = false;
+        });
+        
+        ticking = true;
+    }
+}, 
+{ passive: true });
