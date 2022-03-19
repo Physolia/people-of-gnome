@@ -13,7 +13,7 @@ menu_links_sections:
 #   href: the location where the link points to
 #   header: set this to 'true' if the link should be present in the header, else set 'false'
 #   footer: set this to 'true' if the link should be present in the footer, else set 'false'
-#   external: if the link provided in href is an external link i.e it points to a link outside of the website, then set this to 'false', else don't add this attribute
+#   external: if the link provided in href is an external link i.e it points to a link outside of the website, then set this to 'true', else don't add this attribute
 menus:
   - name: Foundation
     header: true
@@ -78,6 +78,25 @@ menus:
       - name: Mentees
         href: /outreach/mentees
         footer: true
+  - name: Get Involved
+    header: true
+    sub_menus:
+      - name: Matrix/IRC
+        href: https://wiki.gnome.org/GettingInTouch/IRC
+        external: true
+        footer: false
+      - name: Discourse
+        href: https://discourse.gnome.org/
+        external: true
+        footer: false
+      - name: Planet GNOME
+        href: https://planet.gnome.org/
+        external: true
+        footer: false
+      - name: GNOME News
+        href: https://foundation.gnome.org/news/
+        external: true
+        footer: false
 
 menu_links:
   - name: FAQs
@@ -93,3 +112,5 @@ social_links:
     href: https://gitlab.gnome.org/GNOME
   - icon: fab fa-discourse
     href: https://discourse.gnome.org/
+  - icon: fab fa-facebook
+    href: https://www.facebook.com/GNOME
