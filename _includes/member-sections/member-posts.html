@@ -42,10 +42,13 @@
                                 {% endfor %}
                             </div>
                         </div>
+                        <div class="d-flex justify-content-between align-items-baseline">
                         <h4>
-                            <a class="font-weight-normal" id="post-title"
+                            <a class="font-weight-semi-bold" id="post-title"
                                href="{{ post.url | prepend: site.url }}">{{ post.title | escape }}</a>
                         </h4>
+                        <p class="font-weight-normal text-muted ">{% include readtime.html %}</p>
+                        </div>
                         <div class="post-snippet">
                             {{ post.excerpt }}
                         </div>
