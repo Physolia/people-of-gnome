@@ -1,0 +1,12 @@
+<div
+	style="display: grid;
+		place-items: center;
+		height: 60px;
+		border: 2.5px solid gray;
+		border-radius: 25%;
+		font-size: 2em;
+		font-weight: 600;
+		opacity: .8;"
+	role="img" class="float-left app-icon-small img-fluid app-icon icon dropshadow">
+	{{- include.name | split: "" | first | upcase | default: 'G' -}}
+</div>

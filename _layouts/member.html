@@ -75,7 +75,13 @@
                 <div class="row pl-3">
                     <div class="row no-gutters d-flex justify-content-start pt-3">
                       <div class="col-12 col-sm-auto pb-2 mr-3">
-                        <img data-src="{{ project_info.icon }}" class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload" style="opacity:.8;" alt="Fonts">
+                        {% if project_info.icon and project_info.icon != "" %}
+                        <img data-src="{{ project_info.icon }}"
+                          class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload"
+                          alt="{{ project_info.name | append: ' logo'}}">
+                        {% else %}
+                          {% include project-text-icon.html name=project_info.name %}
+                        {% endif %}
                       </div>
                       <div class="col">
                         <h6 class="d-block pl-0 d-md-none col-12 text-primary small font-weight-normal letter-spacing-custom">
