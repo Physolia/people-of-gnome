@@ -1,5 +1,5 @@
 {% assign member_events = site.data.events %}
-{% assign member_page_link = include.member.id | prepend: "/members/" | prepend: site.url %}
+{% assign member_page_link = include.member.id | prepend: "/members/" | relative_url %}
 
 <ul class="list-unstyled list-inline text-small my-1 speaker-index">
     {% if include.speaker_index %}

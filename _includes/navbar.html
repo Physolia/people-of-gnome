@@ -26,7 +26,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
 {% endcase %}
 <header class="navbar sticky-top small bg-{{ bg_color }}">
     <nav class="container navbar-expand-md px-0 px-md-3">
-        <a href="{{ site.url }}" class="pr-2 navbar-brand text-{{ text_color }}">
+        <a href="{{ '/' | relative_url }}" class="pr-2 navbar-brand text-{{ text_color }}">
             {% include gnome-logo.svg %}
         </a>
         <a class="btn navbar-toggler border-0 bg-{{ text_color }}" role="button" data-toggle="collapse"
@@ -48,7 +48,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
                                         {% assign link_href = sub_links.href %}
                                         {% assign target_blank = 'target="_blank"' %}
                                     {% else %}
-                                        {% assign link_href = sub_links.href | prepend: site.url %}
+                                        {% assign link_href = sub_links.href | relative_url %}
                                         {% assign target_blank = '' %}
                                     {% endif %}
                                     <a href="{{ link_href }}" {{ target_blank }} class="small text-{{ text_color }} text-decoration-none nav-sublink-list"><li class="mb-1">{{ sub_links.name }}</li></a>
@@ -59,7 +59,7 @@ to make changes related to the content, edit the `_data/navigation.yml`.
                 {% endfor %}
                 {% assign menu_links = site.data.navigation.menu_links %}
                 {% for link in menu_links %}
-                    <a href="{{ link.href | prepend: site.url }}" {{ target_blank }}
+                    <a href="{{ link.href | relative_url }}" {{ target_blank }}
                     class="nav-link-{{ bg_color }} float-right text-{{ text_color }} rounded">{{ link.name }}</a>
                 {% endfor %}
             </ul>

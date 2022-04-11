@@ -43,7 +43,7 @@ description: Find out more about the mentees of Google Summer of Code & Outreach
         {% assign outreachy_year = year | prepend: "outreachy-" %}        
         <div id="{{ year }}" class="group w-100">
           <div class="{{ 'gsoc-section-' | append: year }} text-center pt-4">
-            <img data-src="{{ '/assets/img/gsoc-logo.svg' | prepend: site.url }}" class="lazyload" alt="GSoC Logo"/>
+            <img data-src="{{ '/assets/img/gsoc-logo.svg' | relative_url }}" class="lazyload" alt="GSoC Logo"/>
             <h4 class="text-center pt-2 pb-4">Google Summer of Code {{ year }}</h4>
             <span class="text-muted">
               <strong class="{{ 'gsoc-message-' | append: year }}"></strong>
@@ -64,7 +64,7 @@ description: Find out more about the mentees of Google Summer of Code & Outreach
           </div>
           <hr class="{{ 'horizontal-rule-' | append: year }} w-75 mt-5 mb-3">
           <div class="{{ 'outreachy-section-' | append: year }} text-center pt-4 pb-5">
-            <img data-src="{{ '/assets/img/outreachy-logo.svg' | prepend: site.url }}" class="lazyload" style="width: 23%" alt="Outreachy Logo"/>
+            <img data-src="{{ '/assets/img/outreachy-logo.svg' | relative_url }}" class="lazyload" style="width: 23%" alt="Outreachy Logo"/>
             <h4 class="text-center pt-2 pb-4">{{ year }}</h4>
             <span class="text-muted">
               <strong class="{{ 'outreachy-message-' | append: year }}"></strong>
@@ -92,5 +92,5 @@ description: Find out more about the mentees of Google Summer of Code & Outreach
 {% include footer.html %}
 {% include scripts.html %}
 
-<script src="{{ '/assets/js/outreach.js' | prepend: site.url }}"></script>
-<script src="{{ '/assets/js/filter-members.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/outreach.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/filter-members.js' | relative_url }}"></script>

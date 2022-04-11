@@ -18,7 +18,7 @@
             {% assign badge = member_badges | where: "id", entry | first %}
             <li class="list-inline-item">
                 {% if badge.internal %}
-                    <a href="{{ badge.link | prepend: site.url }}" class="{{ badge.class }}">
+                    <a href="{{ badge.link | relative_url }}" class="{{ badge.class }}">
                         {{ badge.name }}
                         {% if badge.icon %}
                             <i class="{{ badge.icon }}"></i>

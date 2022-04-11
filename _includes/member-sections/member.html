@@ -1,5 +1,5 @@
-{% assign default_avatar = '/assets/img/avatar.png' | prepend: site.url %}
-{% assign member_page_link = include.member.id | prepend: "/members/" | prepend: site.url %}
+{% assign default_avatar = '/assets/img/avatar.png' | relative_url %}
+{% assign member_page_link = include.member.id | prepend: "/members/" | relative_url %}
 
 <div class="col-8 col-md-4 {% if include.speaker_index == 'true' %} col-lg-4 {% else %} col-lg-3 {% endif %} my-3 px-md-3 gnome-member" data-index="{{ forloop.index | default: 1 }}">
     <div class="d-flex flex-column align-items-center text-center shadow-sm shadow-md-hover p-3 bg-white rounded h-100">

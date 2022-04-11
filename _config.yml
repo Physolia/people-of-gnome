@@ -18,12 +18,13 @@ twitter_username: GNOME
 website_repo: https://gitlab.gnome.org/Teams/Engagement/websites/people-of-gnome
 
 # jekyll configuration options
-url: https://teams.pages.gitlab.gnome.org/Engagement/websites/people-of-gnome
+url: https://teams.pages.gitlab.gnome.org
+baseurl: /Engagement/websites/people-of-gnome
 encoding: utf-8
 
 # markdown converter
 markdown: kramdown
-kramdown: 
+kramdown:
   parse_block_html: true
   input: GFM # github flavored markdown
   auto_ids: true

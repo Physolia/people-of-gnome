@@ -4,7 +4,7 @@
             <div class="row {% if section.reverse == true %} flex-row-reverse {% else %} flex-row {% endif %}">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                        data-src="{{ section.image | prepend: site.url }}"
+                        data-src="{{ section.image | relative_url }}"
                         class="img-fluid w-100 shadow lazyload"
                         alt="GNOME {{ section.title }}"/>
                 </div>
@@ -16,7 +16,7 @@
                     </span>
                     {% if section.link %}
                         <div class="mt-4 right-arrow-text">
-                            <a class="text-muted font-weight-normal letter-spacing-custom pointer text-decoration-none" href="{{ section.link | prepend: site.url }}">Check them here</a>
+                            <a class="text-muted font-weight-normal letter-spacing-custom pointer text-decoration-none" href="{{ section.link | relative_url }}">Check them here</a>
                             <span class="right-arrow"></spam>
                         </div>
                     {% endif %}
