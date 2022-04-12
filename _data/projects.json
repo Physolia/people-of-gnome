@@ -5,7 +5,7 @@
     "icon": "https://www.gtk.org/assets/img/apps/app-polari.png",
     "description": "GNOME Events is the GNOME Platform for all GNOME Conferences and Engagement Activities",
     "repository": "https://gitlab.gnome.org/Teams/Engagement/Events/gnome-indico-resources",
-    "maintainers": ["claudio-wunder", "britt-yazel", "arijitk"],
+    "maintainers": ["claudio-wunder", "britt-yazel"],
     "developers": ["claudio-wunder", "britt-yazel"]
   },
   {
