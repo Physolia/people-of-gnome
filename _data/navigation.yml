@@ -6,8 +6,7 @@ menu_links_sections:
   - title: Foundation
   - title: Contributors
   - title: Events
-  - title: Outreach
-  - title: Get Involved  
+  - title: Get Involved
 # To add navigation links to the website, add a new link with the following attributes:
 #   name: display text of the link
 #   href: the location where the link points to
@@ -74,10 +73,10 @@ menus:
         footer: false
       - name: Mentors
         href: /outreach/mentors
-        footer: true
+        footer: false
       - name: Mentees
         href: /outreach/mentees
-        footer: true
+        footer: false
   - name: Get Involved
     header: false
     sub_menus:
