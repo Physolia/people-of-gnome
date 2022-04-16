@@ -1,72 +1,93 @@
-{% comment %}
-
-this is the file contains the navbar header for all the pages in the website.
-any changes made to this file will affect the navbar section of all the pages.
-to make any design changes to the header section, make changes to this file.
-
-to make changes related to the content, edit the `_data/navigation.yml`.
-
-{% endcomment %}
+{% comment %} this is the file contains the navbar header for all the pages in
+the website. any changes made to this file will affect the navbar section of all
+the pages. to make any design changes to the header section, make changes to
+this file. to make changes related to the content, edit the
+`_data/navigation.yml`. {% endcomment %}
 
 <body>
-{% assign handle = navbar_type %}
-{% case handle %}
-    {% when 'dark' %}
-        {% assign text_color = 'white' %}
-        {% assign bg_color = 'dark' %}
-    {% when 'light' %}
-        {% assign text_color = 'dark' %}
-        {% assign bg_color = 'light' %}
-    {% when 'transparent' %}
-        {% assign text_color = 'dark' %}
-        {% assign bg_color = 'transparent' %}
-    {% else %}
-        {% assign text_color = 'dark' %}
-        {% assign bg_color = 'transparent' %}
-{% endcase %}
-<header class="navbar sticky-top small bg-{{ bg_color }}">
+  {% assign handle = navbar_type %} {% case handle %} {% when 'dark' %} {%
+  assign text_color = 'white' %} {% assign bg_color = 'dark' %} {% when 'light'
+  %} {% assign text_color = 'dark' %} {% assign bg_color = 'light' %} {% when
+  'transparent' %} {% assign text_color = 'dark' %} {% assign bg_color =
+  'transparent' %} {% else %} {% assign text_color = 'dark' %} {% assign
+  bg_color = 'transparent' %} {% endcase %}
+  <header class="navbar sticky-top small bg-{{ bg_color }}">
     <nav class="container navbar-expand-md px-0 px-md-3">
-        <a href="{{ '/' | relative_url }}" class="pr-2 navbar-brand text-{{ text_color }}">
-            {% include gnome-logo.svg %}
-        </a>
-        <a class="btn navbar-toggler border-0 bg-{{ text_color }}" role="button" data-toggle="collapse"
-           data-target="#navbarSupportedContent" href="#">
-            <i class="fas fa-ellipsis-h text-{{ bg_color }}"></i>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-                {% assign menus = site.data.navigation.menus %}
-                {% for menu in menus %}
-                    {% assign page_split = page.url | split: '/' %}
-                    {% assign page_type = page_split[1] | capitalize %}
-                    {% if menu.header %}
-                        <li class="dropdown rounded">
-                            <a class="dropdown-toggle nav-link-{{ bg_color }} float-right text-{{ text_color }} rounded" aria-haspopup="true" aria-expanded="false">{{ menu.name }} <span class="caret"></span></a>
-                            <ul class="dropdown-menu nav-sublink-{{ bg_color }} mt-0">
-                                {% for sub_links in menu.sub_menus %}
-                                    {% if sub_links.external %}
-                                        {% assign link_href = sub_links.href %}
-                                        {% assign target_blank = 'target="_blank"' %}
-                                    {% else %}
-                                        {% assign link_href = sub_links.href | relative_url %}
-                                        {% assign target_blank = '' %}
-                                    {% endif %}
-                                    <a href="{{ link_href }}" {{ target_blank }} class="small text-{{ text_color }} text-decoration-none nav-sublink-list"><li class="mb-1">{{ sub_links.name }}</li></a>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-                {% assign menu_links = site.data.navigation.menu_links %}
-                {% for link in menu_links %}
-                    <a href="{{ link.href | relative_url }}" {{ target_blank }}
-                    class="nav-link-{{ bg_color }} float-right text-{{ text_color }} rounded">{{ link.name }}</a>
-                {% endfor %}
+      <a
+        href="{{ '/' | relative_url }}"
+        class="pr-2 navbar-brand text-{{ text_color }}"
+      >
+        {% include gnome-logo.svg %}
+      </a>
+      <a
+        class="btn navbar-toggler border-0 bg-{{ text_color }}"
+        role="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        href="#"
+      >
+        <i class="fas fa-ellipsis-h text-{{ bg_color }}"></i>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          {% assign menus = site.data.navigation.menus %} {% for menu in menus
+          %} {% assign page_split = page.url | split: '/' %} {% assign page_type
+          = page_split[1] | capitalize %} {% if menu.header %}
+          <li class="dropdown rounded">
+            <a
+              class="dropdown-toggle nav-link-{{ bg_color }} float-right text-{{ text_color }} rounded"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >{{ menu.name }} <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu nav-sublink-{{ bg_color }} mt-0">
+              {% for sub_links in menu.sub_menus %} {% if sub_links.external %}
+              {% assign link_href = sub_links.href %} {% assign target_blank =
+              'target="_blank"' %} {% else %} {% assign link_href =
+              sub_links.href | relative_url %} {% assign target_blank = '' %} {%
+              endif %}
+              <a
+                href="{{ link_href }}"
+                {{
+                target_blank
+                }}
+                class="small text-{{ text_color }} text-decoration-none nav-sublink-list"
+              >
+                <li class="mb-1">{{ sub_links.name }}</li>
+              </a>
+              {% endfor %}
             </ul>
-        </div>
+          </li>
+          {% endif %} {% endfor %} {% assign menu_links =
+          site.data.navigation.menu_links %} {% for link in menu_links %}
+          <a
+            href="{{ link.href | relative_url }}"
+            {{
+            target_blank
+            }}
+            class="nav-link-{{ bg_color }} float-right text-{{ text_color }} rounded"
+            >{{ link.name }}</a
+          >
+          {% endfor %} {% assign menu_links_special =
+          site.data.navigation.menu_links_special %} {% for link in
+          menu_links_special %}
+          <button
+            class="btn btn-sm bg-gblue text-light"
+            type="button"
+            onclick="window.open('{{ link.href }}', '_blank')"
+          >
+            {{ link.name }}
+          </button>
+          {% endfor %}
+        </ul>
+      </div>
     </nav>
-</header>
+  </header>
 
-<button class="d-none btn border border-info bg-white rounded-circle position-fixed" id="btn-go-to-top">
+  <button
+    class="d-none btn border border-info bg-white rounded-circle position-fixed"
+    id="btn-go-to-top"
+  >
     <i class="fas fa-angle-up"></i>
-</button>
+  </button>
+</body>

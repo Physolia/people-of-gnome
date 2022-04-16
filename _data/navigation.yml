@@ -6,7 +6,6 @@ menu_links_sections:
   - title: Foundation
   - title: Contributors
   - title: Events
-  - title: Get Involved
 # To add navigation links to the website, add a new link with the following attributes:
 #   name: display text of the link
 #   href: the location where the link points to
@@ -77,29 +76,14 @@ menus:
       - name: Mentees
         href: /outreach/mentees
         footer: false
-  - name: Get Involved
-    header: false
-    sub_menus:
-      - name: Matrix/IRC
-        href: https://wiki.gnome.org/GettingInTouch/IRC
-        external: true
-        footer: true
-      - name: Discourse
-        href: https://discourse.gnome.org/
-        external: true
-        footer: true
-      - name: Planet GNOME
-        href: https://planet.gnome.org/
-        external: true
-        footer: true
-      - name: GNOME News
-        href: https://foundation.gnome.org/news/
-        external: true
-        footer: true
 
 menu_links:
   - name: FAQs
     href: /faqs
+
+menu_links_special:
+  - name: Get Involved
+    href: https://www.gnome.org/get-involved/
 
 # To add social links to the website, add a new social link with the following attributes:
 #   icon: the name of the icon on https://fontawesome.com/icons
