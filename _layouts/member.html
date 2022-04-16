@@ -76,9 +76,9 @@
                     <div class="row no-gutters d-flex justify-content-start pt-3">
                       <div class="col-12 col-sm-auto pb-2 mr-3">
                         {% if project_info.icon and project_info.icon != "" %}
-                        <img data-src="{{ project_info.icon }}"
-                          class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload"
-                          alt="{{ project_info.name | append: ' logo'}}">
+			    <img data-src="{{ project_info.icon }}"
+			      class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload"
+			      alt="{{ project_info.name | append: ' logo'}}">
                         {% else %}
                           {% include project-text-icon.html name=project_info.name %}
                         {% endif %}

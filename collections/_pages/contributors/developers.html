@@ -32,9 +32,9 @@ developers:
                     <div class="row no-gutters d-flex justify-content-start pt-1">
                         <div class="col-12 col-sm-auto pb-2 mr-3">
                             {% if project.icon and project.icon != "" %}
-                            <img data-src="{{ project.icon }}"
-                                class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload"
-                                alt="{{ project.name | append: ' logo'}}">
+				<img data-src="{{ project.icon }}"
+				    class="float-left app-icon-small img-fluid app-icon icon-dropshadow lazyload"
+				    alt="{{ project.name | append: ' logo'}}">
                             {% else %}
                                 {% include project-text-icon.html name=project.name %}
                             {% endif %}
