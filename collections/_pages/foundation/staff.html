@@ -21,50 +21,47 @@ staff_roles:
       description: Ensure the operations through the GNOME Foundation are fulfilled and act as a history-keeper of the GNOME Project.
 ---
 
-{% include header.html %}
-{% assign navbar_type = "dark" %}
-{% include navbar.html %}
-{% include subheader.html
-        image='/assets/img/gnome-staff-wall.png'
-        heading=page.heading
-        description=page.description %}
-
-{% include foundation/foundation-staff-roles.html
-        heading=page.staff_roles.heading
-        list=page.staff_roles.list %}
+{% include header.html %} {% assign navbar_type = "dark" %} {% include
+navbar.html %} {% include subheader.html
+image='/assets/img/gnome-staff-wall.png' heading=page.heading
+description=page.description %} {% include
+foundation/foundation-staff-roles.html heading=page.staff_roles.heading
+list=page.staff_roles.list %}
 
 <section class="pt-5 pb-4 bg-light" id="team">
-    <div class="container pb-4">
-        <div class="row text-center d-flex justify-content-center">
-            <div class="col-md-10 col-lg-7">
-                <h2 class="font-weight-light mb-3">{{ page.foundation.heading }}</h2>
-                <span class="text-muted">{{ page.foundation.description }}</span>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
-            {% for member_hash in site.data.members %}
-                {% if member_hash[1].active == true and member_hash[1].badges contains 'staff' %}
-                    {% assign member = member_hash[1] %}
-                    {% capture widgets %}
-                        {% include member-sections/member-social.html list=member.social %}
-                    {% endcapture %}
-                    {% include member-sections/member.html member=member widgets=widgets %}
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row d-flex justify-content-center pb-3 mx-auto">
-          <nav aria-label="Page navigation example">
-              <ul class="pagination">
-                  <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
-                         placeholder="Search for a Staff..."/>
-              </ul>
-          </nav>
+  <div class="container pb-4">
+    <div class="row text-center d-flex justify-content-center">
+      <div class="col-md-10 col-lg-7">
+        <h2 class="font-weight-light mb-3">{{ page.foundation.heading }}</h2>
+        <span class="text-muted">{{ page.foundation.description }}</span>
       </div>
     </div>
+    <div class="row d-flex justify-content-center pt-4 pb-3 mx-auto">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <input
+            aria-label=""
+            type="text"
+            class="form-control rounded-left gnome-members-filter"
+            placeholder="Search for a Staff..."
+          />
+        </ul>
+      </nav>
+    </div>
+    <div
+      class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list"
+    >
+      {% for member_hash in site.data.members %} {% if member_hash[1].active ==
+      true and member_hash[1].badges contains 'staff' %} {% assign member =
+      member_hash[1] %} {% capture widgets %} {% include
+      member-sections/member-social.html list=member.social %} {% endcapture %}
+      {% include member-sections/member.html member=member widgets=widgets %} {%
+      endif %} {% endfor %}
+    </div>
+  </div>
 </section>
 
-{% include footer.html %}
-{% include scripts.html %}
+{% include footer.html %} {% include scripts.html %}
 
 <script src="{{ '/assets/js/filter-members.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/go-to-top.js' | relative_url }}"></script>

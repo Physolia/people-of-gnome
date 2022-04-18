@@ -9,46 +9,44 @@ engagement:
   description: These are the current members of Engagement Team
 ---
 
-{% include header.html %}
-{% assign navbar_type = "dark" %}
-{% include navbar.html %}
-{% include subheader.html
-        image='/assets/img/placeholder.png'
-        heading=page.heading
-        description=page.description %}
+{% include header.html %} {% assign navbar_type = "dark" %} {% include
+navbar.html %} {% include subheader.html image='/assets/img/placeholder.png'
+heading=page.heading description=page.description %}
 
 <section class="pt-5 pb-4 bg-light" id="team">
-    <div class="container pb-4">
-        <div class="row text-center d-flex justify-content-center">
-            <div class="col-md-10 col-lg-7">
-                <h2 class="font-weight-light mb-3">{{ page.engagement.heading }}</h2>
-                <span class="text-muted">{{ page.engagement.description }}</span>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list">
-            {% for member_hash in site.data.members %}
-                {% if member_hash[1].badges contains 'engagement' %}
-                    {% assign member = member_hash[1] %}
-                    {% capture widgets %}
-                        {% include member-sections/member-social.html list=member.social %}
-                    {% endcapture %}
-                    {% include member-sections/member.html member=member widgets=widgets %}
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="row d-flex justify-content-center pb-3 mx-auto">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <input aria-label="" type="text" class="form-control rounded-left gnome-members-filter"
-                           placeholder="Search for a member..."/>
-                </ul>
-            </nav>
-        </div>
+  <div class="container pb-4">
+    <div class="row text-center d-flex justify-content-center">
+      <div class="col-md-10 col-lg-7">
+        <h2 class="font-weight-light mb-3">{{ page.engagement.heading }}</h2>
+        <span class="text-muted">{{ page.engagement.description }}</span>
+      </div>
     </div>
+    <div class="row d-flex justify-content-center pt-4 pb-3 mx-auto">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <input
+            aria-label=""
+            type="text"
+            class="form-control rounded-left gnome-members-filter"
+            placeholder="Search for a member..."
+          />
+        </ul>
+      </nav>
+    </div>
+    <div
+      class="row d-flex justify-content-center pt-5 pb-4 mx-auto gnome-members-list"
+    >
+      {% for member_hash in site.data.members %} {% if member_hash[1].badges
+      contains 'engagement' %} {% assign member = member_hash[1] %} {% capture
+      widgets %} {% include member-sections/member-social.html
+      list=member.social %} {% endcapture %} {% include
+      member-sections/member.html member=member widgets=widgets %} {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
-{% include footer.html %}
-{% include scripts.html %}
+{% include footer.html %} {% include scripts.html %}
 
 <script src="{{ '/assets/js/filter-members.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/go-to-top.js' | relative_url }}"></script>
