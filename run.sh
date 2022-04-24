@@ -16,4 +16,4 @@ echo -e "\n💡 \033[1;31mplease access via localhost and not 127.0.0.1! \033[0m
 
 echo -e "\n🎉 \033[1;34mstarting jekyll \033[0m\n"
 
-$BUNDLER_PATH/bundle exec jekyll s --watch --livereload --host=localhost --baseurl=""
+$BUNDLER_PATH/bundle exec jekyll s --watch --livereload --host=${JEKYLL_HOST:-localhost} --baseurl=""

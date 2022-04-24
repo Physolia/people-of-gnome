@@ -1,0 +1,23 @@
+services:
+  dev:
+    image: people-of-gnome:dev
+    build: .
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - ./:/site
+
+      # dependency dirs
+      - bundler:/site/.bundle
+      - node_modules:/site/node_modules
+      - 3rd-party:/site/assets/3rd-party
+    command: ./run.sh
+
+# using volumes avoids cluttering
+# filesystem; and allows for easy
+# deletion of dependencies
+volumes:
+  bundler:
+  node_modules:
+  3rd-party:

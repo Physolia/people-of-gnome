@@ -94,7 +94,7 @@ $color in $nav-bar-types {
   }
 }
 
-@import "../bootstrap/scss/bootstrap";
+@import "../3rd-party/bootstrap/scss/bootstrap";
 
 @mixin badge-variant($bg) {
   color: $bg !important;

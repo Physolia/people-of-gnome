@@ -40,10 +40,11 @@ echo -e "\n💡 \033[1;34mcopying node packages locally \033[0m\n"
 
 dependencies=('@fortawesome' 'bootstrap' 'jquery-slim' 'moment' 'popper.js' 'slick-carousel' 'lazysizes')
 
+mkdir -p assets/3rd-party
 for dependency in "${dependencies[@]}"
 do
-    rsync -a node_modules/${dependency} assets
-    echo -e "✓ \033[1;32mmoved ${dependency} to assets/ folder \033[0m"
+    rsync -a node_modules/${dependency} assets/3rd-party/
+    echo -e "✓ \033[1;32mmoved ${dependency} to assets/3rd-party/ folder \033[0m"
 done
 
 echo -e "\n👌 \033[1;35minstallation finished \033[0m\n"

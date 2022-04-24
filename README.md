@@ -130,12 +130,12 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 
 - Software Dependencies
   - [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-  - Ruby Development Package (aka ruby-dev)
+  - Ruby Development Package (aka `ruby-dev` or `ruby-devel`)
   - [NodeJS](https://nodejs.org/en/download/)
 - Installing Dependencies in **Ubuntu/Debian**
   ```bash
   # update repositories & install basic build dependencies
-  sudo apt update && sudo apt install -y build-essential bash git rsync curl gnupg2 
+  sudo apt update && sudo apt install -y build-essential bash git rsync curl gnupg2
 
   # prepare to install nodejs and yarn
   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -169,9 +169,13 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
   # install ruby 2.7.5
   rbenv install 2.7.5
   ```
+- Installing Dependencies Docker
+  - Haha, that's a joke. Docker is the only real dependency!
+  - Optionally [install `docker compose`](https://docs.docker.com/compose/install/#install-compose-on-linux-systems)
+    (if on Linux)
 
 ### Setting up the repository
-  
+
 To get the site up and running locally, follow the below steps:
 
 **PS.:** You need to have a full Bash environment. If you're on Windows, please use WSL.
@@ -184,6 +188,10 @@ To get the site up and running locally, follow the below steps:
   ```
   cd people-of-gnome
   ```
+### Setup and serve locally
+
+#### In host OS
+
 - Perform the following commands to install dependencies and structure the website properly:
   ```
   ./setup.sh
@@ -192,6 +200,33 @@ To get the site up and running locally, follow the below steps:
   ```
   ./run.sh
   ```
+
+### In Docker
+
+- If `docker compose` is installed _(default on MacOS and Windows)_
+```bash
+docker compose up
+
+### personal customisation options in docker-compose.override.yml
+### https://docs.docker.com/compose/extends/#understanding-multiple-compose-files
+
+```
+- Using just `docker`
+```bash
+docker build --tag people-of-gnome:dev .
+docker run -it \
+    --name=people-of-gnome-dev-server \
+    --volume=$(pwd):/site \
+    --volume=/site/node_modules \
+    --volume=/site/.bundle \
+    --volume=/site/assets/3rd-party \
+    --publish=4000:4000 \
+    --publish=35729:35729 \
+    people-of-gnome:dev
+
+### customisation options `man docker-run`
+```
+
 - Browse [http://localhost:4000](http://localhost:4000) to view the website.
 
 ## Project Dependencies
