@@ -130,8 +130,10 @@ You're also free to add new Badges and Social Networks and Projects/Repositories
 
 - Software Dependencies
   - [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-  - Ruby Development Package (aka `ruby-dev` or `ruby-devel`)
+  - [rbenv](https://github.com/rbenv/rbenv#installation)
+    - [ruby-build](https://github.com/rbenv/ruby-build#installation) (if not installed by your package manager)
   - [NodeJS](https://nodejs.org/en/download/)
+
 - Installing Dependencies in **Ubuntu/Debian**
   ```bash
   # update repositories & install basic build dependencies
