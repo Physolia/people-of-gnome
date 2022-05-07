@@ -1,20 +1,29 @@
-$breakpoints: (
-    'sm': 576px,
+$breakpoints: ('sm': 576px,
     'md': 768px,
     'lg': 992px,
     'xl': 1200px,
 );
 
-$widths: 25, 50, 75, 100, auto;
-$heights: 25, 50, 75, 100, auto;
+$widths: 25,
+50,
+75,
+100,
+auto;
+$heights: 25,
+50,
+75,
+100,
+auto;
 
 @each $breakpoint in map-keys($breakpoints) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
         @each $i in $widths {
             .w-#{$breakpoint}-#{$i} {
-                @if type-of($i) == 'number' {
-                    width: unquote($i + '%' + ' !important');
-                } @else {
+                @if type-of($i)=='number' {
+                    width: unquote($i + '%'+ ' !important');
+                }
+
+                @else {
                     width: #{$i} !important;
                 }
             }
@@ -22,9 +31,11 @@ $heights: 25, 50, 75, 100, auto;
 
         @each $i in $heights {
             .h-#{$breakpoint}-#{$i} {
-                @if type-of($i) == 'number' {
-                    height: unquote($i + '%' + ' !important');
-                } @else {
+                @if type-of($i)=='number' {
+                    height: unquote($i + '%'+ ' !important');
+                }
+
+                @else {
                     height: #{$i} !important;
                 }
             }
@@ -38,6 +49,7 @@ $heights: 25, 50, 75, 100, auto;
 }
 
 @media (max-width: 576px) {
+
     small,
     .small {
         font-size: 100%;
@@ -342,9 +354,17 @@ select {
     font-weight: 600 !important;
 }
 
-/* styling for get invloved button */
+/* styling for GNOME Blue */
 .bg-gblue {
     background-color: #4a86cf;
+}
+
+.border-gblue {
+    border-color: #4a86cf !important;
+}
+
+.text-gblue {
+    color: #4a86cf;
 }
 
 /* styling for the go to top button */
@@ -414,6 +434,7 @@ h6.letter-spacing-custom,
 }
 
 .grp-btn {
+
     &:focus,
     &:active {
         outline: none !important;
@@ -827,10 +848,12 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
     .title {
         height: 400px;
         width: 100%;
+
         @media screen and (max-width: 768px) {
             height: auto;
         }
     }
+
     img {
         height: 400px;
         width: 100%;

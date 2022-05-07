@@ -8,25 +8,25 @@
         </div>
         <div class="row contribution-types py-4">
             {% for type in include.list %}
-                <div class="col-md-6 p-0">
-                    <div class="col p-3">
-                        <a href="{{ type.link | relative_url}}" class="text-decoration-none">
-                            <div class="col d-flex p-0 border border-primary rounded pointer shadow-sm-hover">
-                                <div class="bg-primary p-3 pt-4 rounded-left">
-                                    <i class="{{ type.icon }} fa-inverse fa-fw fa-lg my-auto"></i>
-                                </div>
-                                <div class="ml-1 p-2">
-                                    <h7>{{ type.title }}</h7>
-                                    <span class="text-muted small">{{ type.description | markdownify }}</span>
-                                </div>
+            <div class="col-md-6 p-0">
+                <div class="col p-3">
+                    <a href="{{ type.link | relative_url}}" class="text-decoration-none">
+                        <div class="col d-flex p-0 border border-gblue rounded pointer shadow-sm-hover">
+                            <div class="bg-gblue p-3 pt-4 rounded-left">
+                                <i class="{{ type.icon }} fa-inverse fa-fw fa-lg my-auto"></i>
                             </div>
-                        </a>
-                    </div>
+                            <div class="ml-1 p-2">
+                                <h7>{{ type.title }}</h7>
+                                <span class="text-muted small">{{ type.description | markdownify }}</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+            </div>
             {% endfor %}
         </div>
         <a href="https://wiki.gnome.org/Newcomers/" target="_blank"
-           class="d-flex py-3 px-3 my-3 text-decoration-none text-primary border rounded shadow-sm-hover bg-light-hover justify-content-between align-items-center mb-2">
+            class="d-flex py-3 px-3 my-3 text-decoration-none text-gblue border rounded shadow-sm-hover bg-light-hover justify-content-between align-items-center mb-2">
             Join our Community! Start contributing to GNOME!
             <i class="fas fa-chevron-circle-right text-info"></i>
         </a>
